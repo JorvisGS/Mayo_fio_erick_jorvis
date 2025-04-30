@@ -1,0 +1,94 @@
+[gd_scene load_steps=11 format=3 uid="uid://cquxox3bwajai"]
+
+[ext_resource type="Script" path="res://Assests/enemigos/Slime/slime_2d.gd" id="1_j2hln"]
+[ext_resource type="Texture2D" uid="uid://ch4x76v6qegpu" path="res://Assests/enemigos/Slime/sprite/red-slime-spritesheet.png" id="1_u75sg"]
+[ext_resource type="PackedScene" uid="uid://bgtmb42f6nbij" path="res://Assests/scenas/zona_muerte.tscn" id="2_rkwle"]
+
+[sub_resource type="Animation" id="Animation_6w683"]
+resource_name = "caminando"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 3, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_mdws3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g8dxl"]
+_data = {
+"RESET": SubResource("Animation_mdws3"),
+"caminando": SubResource("Animation_6w683")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pg1qi"]
+animation = &"caminando"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wfeap"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_hi2ns"]
+states/End/position = Vector2(535, 144)
+states/Start/position = Vector2(209, 144)
+states/caminando/node = SubResource("AnimationNodeAnimation_pg1qi")
+states/caminando/position = Vector2(362, 144)
+transitions = ["Start", "caminando", SubResource("AnimationNodeStateMachineTransition_wfeap")]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhhib"]
+size = Vector2(12, 8)
+
+[node name="slime" type="Node2D"]
+script = ExtResource("1_j2hln")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_u75sg")
+hframes = 11
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_g8dxl")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../Sprite2D")
+tree_root = SubResource("AnimationNodeStateMachine_hi2ns")
+anim_player = NodePath("../Sprite2D/AnimationPlayer")
+
+[node name="ZonaMuerte" parent="." instance=ExtResource("2_rkwle")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaMuerte"]
+visible = false
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_jhhib")
+
+[node name="RayCastderecha" type="RayCast2D" parent="."]
+visible = false
+position = Vector2(0, -4)
+target_position = Vector2(7, 0)
+
+[node name="RayCastizquierda" type="RayCast2D" parent="."]
+visible = false
+position = Vector2(0, -4)
+target_position = Vector2(-8, 0)
