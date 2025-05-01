@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://dad3gyq7o4s6e"]
+[gd_scene load_steps=26 format=3 uid="uid://dad3gyq7o4s6e"]
 
 [ext_resource type="Script" path="res://Assests/GatoBlanco/gato.gd" id="1_bsw44"]
 [ext_resource type="Texture2D" uid="uid://tbn7x080tej1" path="res://Assests/GatoBlanco/sprites/gato-normal.png" id="2_0e4gw"]
 [ext_resource type="Animation" uid="uid://cny3h268rf2h4" path="res://Assests/GatoBlanco/Animaciones/quieto.res" id="3_6wq3i"]
 [ext_resource type="Animation" uid="uid://de5k1gubu7712" path="res://Assests/GatoBlanco/Animaciones/caminar.res" id="4_i2ueg"]
+[ext_resource type="Animation" uid="uid://cs73rw4t4q0ac" path="res://Assests/GatoBlanco/Animaciones/daño.res" id="5_cevjp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4hhsn"]
 radius = 6.0208
@@ -21,22 +22,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_1u8wt"]
-resource_name = "aterrizaje"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.133333, 0.266667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [30, 31, 32]
 }
 
 [sub_resource type="Animation" id="Animation_5t3qh"]
@@ -58,9 +43,9 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cwsv3"]
 _data = {
 "RESET": SubResource("Animation_ps0gh"),
-"aterrizaje": SubResource("Animation_1u8wt"),
 "caminar": ExtResource("4_i2ueg"),
 "cayendo": SubResource("Animation_5t3qh"),
+"daño": ExtResource("5_cevjp"),
 "quieto": ExtResource("3_6wq3i")
 }
 
@@ -69,6 +54,9 @@ animation = &"caminar"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0pobm"]
 animation = &"cayendo"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8cvvw"]
+animation = &"daño"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0je14"]
 animation = &"quieto"
@@ -102,15 +90,35 @@ switch_mode = 2
 advance_mode = 2
 advance_condition = &"caminando"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vf0p6"]
+advance_mode = 2
+advance_condition = &"daño"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8stbo"]
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"quieto"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ec60n"]
+advance_mode = 2
+advance_condition = &"daño"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bevel"]
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"caminando"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_d6256"]
 states/caminar/node = SubResource("AnimationNodeAnimation_kjwdg")
 states/caminar/position = Vector2(527, 100)
 states/cayendo/node = SubResource("AnimationNodeAnimation_0pobm")
 states/cayendo/position = Vector2(442, -18)
+"states/daño/node" = SubResource("AnimationNodeAnimation_8cvvw")
+"states/daño/position" = Vector2(442, 218)
 states/quieto/node = SubResource("AnimationNodeAnimation_0je14")
 states/quieto/position = Vector2(349, 100)
-transitions = ["Start", "quieto", SubResource("AnimationNodeStateMachineTransition_0we57"), "quieto", "caminar", SubResource("AnimationNodeStateMachineTransition_wm1tw"), "caminar", "quieto", SubResource("AnimationNodeStateMachineTransition_pw1nt"), "quieto", "cayendo", SubResource("AnimationNodeStateMachineTransition_ecctg"), "caminar", "cayendo", SubResource("AnimationNodeStateMachineTransition_deexg"), "cayendo", "quieto", SubResource("AnimationNodeStateMachineTransition_7aao5"), "cayendo", "caminar", SubResource("AnimationNodeStateMachineTransition_g6l8a")]
-graph_offset = Vector2(-7, -147)
+transitions = ["Start", "quieto", SubResource("AnimationNodeStateMachineTransition_0we57"), "quieto", "caminar", SubResource("AnimationNodeStateMachineTransition_wm1tw"), "caminar", "quieto", SubResource("AnimationNodeStateMachineTransition_pw1nt"), "quieto", "cayendo", SubResource("AnimationNodeStateMachineTransition_ecctg"), "caminar", "cayendo", SubResource("AnimationNodeStateMachineTransition_deexg"), "cayendo", "quieto", SubResource("AnimationNodeStateMachineTransition_7aao5"), "cayendo", "caminar", SubResource("AnimationNodeStateMachineTransition_g6l8a"), "quieto", "daño", SubResource("AnimationNodeStateMachineTransition_vf0p6"), "daño", "quieto", SubResource("AnimationNodeStateMachineTransition_8stbo"), "caminar", "daño", SubResource("AnimationNodeStateMachineTransition_ec60n"), "daño", "caminar", SubResource("AnimationNodeStateMachineTransition_bevel")]
+graph_offset = Vector2(21, -25)
 
 [node name="gato" type="CharacterBody2D" groups=["jugador"]]
 script = ExtResource("1_bsw44")
@@ -141,4 +149,5 @@ tree_root = SubResource("AnimationNodeStateMachine_d6256")
 anim_player = NodePath("../Sprite2D/AnimationPlayer")
 parameters/conditions/caminando = false
 parameters/conditions/cayendo = false
+"parameters/conditions/daño" = false
 parameters/conditions/quieto = false

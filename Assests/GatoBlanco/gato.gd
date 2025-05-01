@@ -9,6 +9,7 @@ extends CharacterBody2D
 
 
 #animaciones
+@onready var animation_player: AnimationPlayer = $Sprite2D/AnimationPlayer
 @onready var maquinaEstados:AnimationTree = $AnimationTree
 @onready var sprite:Sprite2D = $Sprite2D
 func quieto(actiado:bool):
@@ -21,11 +22,15 @@ func cayendo(actiado:bool):
 	maquinaEstados["parameters/conditions/cayendo"] = actiado
 	await get_tree().create_timer(0.1).timeout
 	maquinaEstados["parameters/conditions/cayendo"] = not actiado
-
+func reproducir_animacion_daño():
+	maquinaEstados["parameters/conditions/daño"] = true
+	await get_tree().create_timer(0.1).timeout
+	maquinaEstados["parameters/conditions/daño"] = false
+	maquinaEstados["parameters/conditions/quieto"] = true
 
 
 func _process(delta: float) -> void:
-	
+	animation_player.play("daño")
 	
 	#gravedad
 	if not is_on_floor():

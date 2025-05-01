@@ -79,13 +79,16 @@ anim_player = NodePath("../Sprite2D/AnimationPlayer")
 [node name="ZonaMuerte" parent="." instance=ExtResource("2_rkwle")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaMuerte"]
+visible = false
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_jhhib")
 
 [node name="RayCastderecha" type="RayCast2D" parent="."]
+visible = false
 position = Vector2(0, -4)
 target_position = Vector2(7, 0)
 
 [node name="RayCastizquierda" type="RayCast2D" parent="."]
+visible = false
 position = Vector2(0, -4)
 target_position = Vector2(-8, 0)
