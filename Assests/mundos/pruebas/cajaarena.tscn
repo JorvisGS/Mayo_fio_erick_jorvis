@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://0lq3ywraog88"]
+[gd_scene load_steps=9 format=4 uid="uid://0lq3ywraog88"]
 
 [ext_resource type="Texture2D" uid="uid://dlqe1g8jivv2o" path="res://Assests/Terreno/normal/Terrain (16 x 16).png" id="1_ycbdb"]
 [ext_resource type="PackedScene" uid="uid://dad3gyq7o4s6e" path="res://Assests/GatoBlanco/Gato.tscn" id="2_78jwu"]
 [ext_resource type="PackedScene" uid="uid://cquxox3bwajai" path="res://Assests/enemigos/Slime/Slime_2d.tscn" id="3_5lg8y"]
 [ext_resource type="PackedScene" uid="uid://bgtmb42f6nbij" path="res://Assests/scenas/zona_muerte.tscn" id="4_bl8uy"]
+[ext_resource type="PackedScene" uid="uid://cbc4hx7etsgip" path="res://Assests/monedas/moneda.tscn" id="5_jtmfv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_khkvf"]
 texture = ExtResource("1_ycbdb")
@@ -306,6 +307,8 @@ terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.695809, 0.146023, 1.92523e-07, 1)
 sources/0 = SubResource("TileSetAtlasSource_khkvf")
 
+[sub_resource type="LabelSettings" id="LabelSettings_7uwv6"]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -315,6 +318,14 @@ tile_set = SubResource("TileSet_qjomg")
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_78jwu")]
 position = Vector2(152, 65)
 collision_layer = 2
+
+[node name="Label" type="Label" parent="CharacterBody2D"]
+offset_left = -91.0
+offset_top = -53.0
+offset_right = -2.0
+offset_bottom = -30.0
+text = "Monedas: 0"
+label_settings = SubResource("LabelSettings_7uwv6")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(5.875, 5.875)
@@ -326,3 +337,24 @@ position_smoothing_enabled = true
 position = Vector2(372, 113)
 
 [node name="ZonaMuerte" parent="." instance=ExtResource("4_bl8uy")]
+
+[node name="monedas" type="Node2D" parent="."]
+
+[node name="moneda" parent="monedas" instance=ExtResource("5_jtmfv")]
+position = Vector2(295, 69)
+collision_layer = 2
+collision_mask = 2
+
+[node name="moneda2" parent="monedas" instance=ExtResource("5_jtmfv")]
+position = Vector2(546, 94)
+collision_layer = 2
+collision_mask = 2
+
+[node name="moneda3" parent="monedas" instance=ExtResource("5_jtmfv")]
+position = Vector2(439, 68)
+collision_layer = 2
+collision_mask = 2
+
+[connection signal="collected" from="monedas/moneda" to="CharacterBody2D" method="_on_moneda_collected"]
+[connection signal="collected" from="monedas/moneda2" to="CharacterBody2D" method="_on_moneda_collected"]
+[connection signal="collected" from="monedas/moneda3" to="CharacterBody2D" method="_on_moneda_collected"]
