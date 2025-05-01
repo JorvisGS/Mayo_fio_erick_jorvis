@@ -3,7 +3,7 @@ extends CanvasLayer
 var coin_count = 0
 func _on_moneda_collected():
 	coin_count += 1
-	moneda_label.text="x: "+ str(coin_count)
+	moneda_label.text="X: "+ str(coin_count)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

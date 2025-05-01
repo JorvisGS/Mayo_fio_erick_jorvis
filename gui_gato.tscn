@@ -22,4 +22,5 @@ offset_left = 102.0
 offset_top = 35.0
 offset_right = 142.0
 offset_bottom = 73.0
+text = "X 0"
 label_settings = SubResource("LabelSettings_kgpgu")

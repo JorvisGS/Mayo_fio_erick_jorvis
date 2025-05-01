@@ -333,20 +333,28 @@ position = Vector2(372, 113)
 [node name="monedas" type="Node2D" parent="."]
 
 [node name="moneda" parent="monedas" instance=ExtResource("5_jtmfv")]
-position = Vector2(295, 69)
+position = Vector2(194, 71)
 collision_layer = 2
 collision_mask = 2
 
-[node name="moneda2" parent="monedas" instance=ExtResource("5_jtmfv")]
-position = Vector2(546, 94)
+[node name="monedas2" type="Node2D" parent="."]
+
+[node name="moneda" parent="monedas2" instance=ExtResource("5_jtmfv")]
+position = Vector2(296, 71)
 collision_layer = 2
 collision_mask = 2
 
-[node name="moneda3" parent="monedas" instance=ExtResource("5_jtmfv")]
-position = Vector2(439, 68)
+[node name="moneda2" parent="monedas2" instance=ExtResource("5_jtmfv")]
+position = Vector2(443, 71)
+collision_layer = 2
+collision_mask = 2
+
+[node name="moneda3" parent="monedas2" instance=ExtResource("5_jtmfv")]
+position = Vector2(443, 71)
 collision_layer = 2
 collision_mask = 2
 
 [connection signal="collected" from="monedas/moneda" to="CanvasLayer" method="_on_moneda_collected"]
-[connection signal="collected" from="monedas/moneda2" to="CharacterBody2D" method="_on_moneda_collected"]
-[connection signal="collected" from="monedas/moneda3" to="CharacterBody2D" method="_on_moneda_collected"]
+[connection signal="collected" from="monedas2/moneda" to="CanvasLayer" method="_on_moneda_collected"]
+[connection signal="collected" from="monedas2/moneda2" to="CanvasLayer" method="_on_moneda_collected"]
+[connection signal="collected" from="monedas2/moneda3" to="CanvasLayer" method="_on_moneda_collected"]
