@@ -308,6 +308,7 @@ terrain_set_0/terrain_0/color = Color(0.695809, 0.146023, 1.92523e-07, 1)
 sources/0 = SubResource("TileSetAtlasSource_khkvf")
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(-1, 0)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("5_1d388")]
 
