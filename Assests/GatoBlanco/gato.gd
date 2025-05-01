@@ -4,12 +4,8 @@ extends CharacterBody2D
 @export var gravedad = 100
 @export var salto = 50
 @export var velocidad = 100
-@onready var moneda_label=$Label
-var coin_count = 0
 
-func _on_moneda_collected():
-	coin_count += 1
-	moneda_label.text="Monedas: "+ str(coin_count)
+
 
 
 #animaciones

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dibh14f0arncu"]
+
+[ext_resource type="Texture2D" uid="uid://tlvb3b3c432o" path="res://Assests/monedas/moneda.png" id="1_5nuiy"]
+[ext_resource type="Script" path="res://gui_gato.gd" id="1_8wl31"]
+[ext_resource type="FontFile" uid="uid://mf1opp6a403y" path="res://Daydream.ttf" id="3_2i8b5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kgpgu"]
+font = ExtResource("3_2i8b5")
+font_size = 28
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_8wl31")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(59, 44)
+scale = Vector2(5.75, 5.75)
+texture = ExtResource("1_5nuiy")
+hframes = 13
+
+[node name="moneda_label" type="Label" parent="."]
+offset_left = 102.0
+offset_top = 35.0
+offset_right = 142.0
+offset_bottom = 73.0
+label_settings = SubResource("LabelSettings_kgpgu")
