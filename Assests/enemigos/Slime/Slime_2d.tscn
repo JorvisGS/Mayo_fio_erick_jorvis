@@ -79,7 +79,6 @@ anim_player = NodePath("../Sprite2D/AnimationPlayer")
 [node name="ZonaMuerte" parent="." instance=ExtResource("2_rkwle")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaMuerte"]
-visible = false
 light_mask = 4
 visibility_layer = 2
 position = Vector2(0, -4)
