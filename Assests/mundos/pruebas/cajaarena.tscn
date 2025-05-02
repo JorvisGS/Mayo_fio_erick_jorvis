@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://0lq3ywraog88"]
+[gd_scene load_steps=9 format=4 uid="uid://0lq3ywraog88"]
 
 [ext_resource type="Texture2D" uid="uid://dlqe1g8jivv2o" path="res://Assests/Terreno/normal/Terrain (16 x 16).png" id="1_ycbdb"]
 [ext_resource type="PackedScene" uid="uid://dad3gyq7o4s6e" path="res://Assests/GatoBlanco/Gato.tscn" id="2_78jwu"]
 [ext_resource type="PackedScene" uid="uid://cquxox3bwajai" path="res://Assests/enemigos/Slime/Slime_2d.tscn" id="3_5lg8y"]
 [ext_resource type="PackedScene" uid="uid://dibh14f0arncu" path="res://Assests/interfaz/personaje/gui_gato.tscn" id="5_1d388"]
 [ext_resource type="PackedScene" uid="uid://cbc4hx7etsgip" path="res://Assests/objetos/monedas/moneda.tscn" id="5_jtmfv"]
+[ext_resource type="PackedScene" uid="uid://crj5gi0b8u3ci" path="res://Assests/objetos/lata_comida/lata_comida.tscn" id="6_nvigs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_khkvf"]
 texture = ExtResource("1_ycbdb")
@@ -329,8 +330,8 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="slime" parent="." instance=ExtResource("3_5lg8y")]
-position = Vector2(511, 179)
-scale = Vector2(35.4302, 22.318)
+position = Vector2(339, 111)
+scale = Vector2(5, 3.15)
 
 [node name="monedas2" type="Node2D" parent="."]
 
@@ -346,6 +347,20 @@ collision_mask = 2
 position = Vector2(480, 89)
 collision_mask = 2
 
+[node name="latas" type="Node2D" parent="."]
+
+[node name="lata_comida" parent="latas" instance=ExtResource("6_nvigs")]
+position = Vector2(516, 98)
+collision_layer = 2
+collision_mask = 2
+
+[node name="lata_comida2" parent="latas" instance=ExtResource("6_nvigs")]
+position = Vector2(546, 98)
+collision_layer = 2
+collision_mask = 2
+
 [connection signal="collected" from="monedas2/moneda" to="CanvasLayer" method="_on_moneda_collected"]
 [connection signal="collected" from="monedas2/moneda2" to="CanvasLayer" method="_on_moneda_collected"]
 [connection signal="collected" from="monedas2/moneda3" to="CanvasLayer" method="_on_moneda_collected"]
+[connection signal="comida" from="latas/lata_comida" to="CanvasLayer" method="_on_lata_comida_comida"]
+[connection signal="comida" from="latas/lata_comida2" to="CanvasLayer" method="_on_lata_comida_comida"]

@@ -20,7 +20,12 @@ func take_damage(amount: int = 1):
 		gato.morir()
 		await get_tree().create_timer(1).timeout
 		get_tree().reload_current_scene()
-	
+
+
+
+func heal(amount: int = 1):
+	current_hearts = clamp(current_hearts + amount, 0, max_hearts)
+	update_hearts()
 
 func update_hearts():
 	for i in range(max_hearts):
@@ -36,3 +41,7 @@ func _on_moneda_collected():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	update_hearts()
+
+
+func _on_lata_comida_comida() -> void:
+	heal()

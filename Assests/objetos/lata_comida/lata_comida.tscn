@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://crj5gi0b8u3ci"]
+
+[ext_resource type="Texture2D" uid="uid://b7asda7gnk6co" path="res://Assests/objetos/lata_comida/lataComida.png" id="1_3gk6g"]
+[ext_resource type="Script" path="res://Assests/objetos/lata_comida/lata_comida.gd" id="1_k4t6e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dulmx"]
+
+[node name="lata_comida" type="Area2D"]
+script = ExtResource("1_k4t6e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3gk6g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dulmx")
