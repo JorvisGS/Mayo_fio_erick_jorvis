@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://tlvb3b3c432o" path="res://Assests/objetos/monedas/moneda.png" id="1_5nuiy"]
 [ext_resource type="Script" path="res://Assests/interfaz/personaje/gui_gato.gd" id="1_8wl31"]
 [ext_resource type="FontFile" uid="uid://mf1opp6a403y" path="res://Assests/fuentes/Daydream.ttf" id="3_2i8b5"]
-[ext_resource type="Texture2D" uid="uid://b5jpx2gs7rsu7" path="res://Assests/objetos/corazones/heart.webp" id="4_i8uju"]
+[ext_resource type="Texture2D" uid="uid://clnlmlsm6gsgl" path="res://Assests/objetos/corazones/corazon.png" id="4_gtroa"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kgpgu"]
 font = ExtResource("3_2i8b5")
@@ -37,8 +37,8 @@ layout_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/TextureRect"]
 position = Vector2(59, 131)
-scale = Vector2(0.08, 0.08)
-texture = ExtResource("4_i8uju")
+scale = Vector2(2.806, 2.812)
+texture = ExtResource("4_gtroa")
 
 [node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
@@ -46,8 +46,8 @@ layout_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/TextureRect2"]
 position = Vector2(59, 131)
-scale = Vector2(0.08, 0.08)
-texture = ExtResource("4_i8uju")
+scale = Vector2(2.806, 2.806)
+texture = ExtResource("4_gtroa")
 
 [node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
@@ -55,5 +55,5 @@ layout_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/TextureRect3"]
 position = Vector2(59, 131)
-scale = Vector2(0.08, 0.08)
-texture = ExtResource("4_i8uju")
+scale = Vector2(2.806, 2.806)
+texture = ExtResource("4_gtroa")
