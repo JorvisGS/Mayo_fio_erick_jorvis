@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmhquxuvho8si"]
+
+[ext_resource type="Script" path="res://lata_comida.gd" id="1_2s7db"]
+[ext_resource type="Texture2D" path="res://Assests/objetos/corazones/lataComida.png" id="2_omk5m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cup7f"]
+size = Vector2(19, 24)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_2s7db")
+
+[node name="LataComida" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+texture = ExtResource("2_omk5m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_cup7f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -11,7 +11,7 @@ var puede_moverse: bool = true
 #animaciones
 @onready var animation_player: AnimationPlayer = $Sprite2D/AnimationPlayer
 @onready var maquinaEstados:AnimationTree = $AnimationTree
-@onready var sprite:Sprite2D = $Sprite2D
+@onready var sprite:Sprite2D = $Sprite2D	
 func quieto(actiado:bool):
 	maquinaEstados["parameters/conditions/quieto"] = actiado
 	maquinaEstados["parameters/conditions/caminando"] = not actiado
@@ -23,10 +23,10 @@ func cayendo(actiado:bool):
 	await get_tree().create_timer(0.1).timeout
 	maquinaEstados["parameters/conditions/cayendo"] = not actiado
 func reproducir_animacion_daño():
-	maquinaEstados["parameters/conditions/daño"] = true
-	await get_tree().create_timer(0.1).timeout
-	maquinaEstados["parameters/conditions/daño"] = false
-	maquinaEstados["parameters/conditions/quieto"] = true
+	maquinaEstados.active = false
+	animation_player.play("daño")
+	await get_tree().create_timer(0.3).timeout
+	maquinaEstados.active = true
 
 
 func _process(delta: float) -> void:
