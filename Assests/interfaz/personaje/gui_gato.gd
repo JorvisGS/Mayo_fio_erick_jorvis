@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var gato = get_node("/Assests/GatoBlanco/Gato")
+@onready var gato = get_node("../CharacterBody2D")
 @onready var moneda_label=$moneda_label
 var coin_count = 0
 @export var heart_texture : Texture2D
@@ -17,7 +17,7 @@ func take_damage(amount: int = 1):
 	current_hearts = max(current_hearts - amount, 0)
 	update_hearts()
 	if current_hearts <= 0:
-		gato.set_process(false) 
+		gato.morir()
 		await get_tree().create_timer(1).timeout
 		get_tree().reload_current_scene()
 	

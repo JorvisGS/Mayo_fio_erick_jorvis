@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://cbc4hx7etsgip"]
 
-[ext_resource type="Texture2D" uid="uid://tlvb3b3c432o" path="res://Assests/monedas/moneda.png" id="2_6j1nn"]
-[ext_resource type="Script" path="res://Assests/monedas/moneda.gd" id="2_jjkg8"]
+[ext_resource type="Texture2D" uid="uid://tlvb3b3c432o" path="res://Assests/objetos/monedas/moneda.png" id="2_6j1nn"]
+[ext_resource type="Script" path="res://Assests/objetos/monedas/moneda.gd" id="2_jjkg8"]
 
 [sub_resource type="Animation" id="Animation_0h71w"]
 length = 0.001

@@ -32,6 +32,7 @@ func reproducir_animacion_daño():
 func _process(delta: float) -> void:
 	animation_player.play("daño")
 	
+	
 	#gravedad
 	if not is_on_floor():
 		velocity.y = velocity.y + gravedad * delta
@@ -66,6 +67,7 @@ func morir():
 	tween.tween_property(self, "modulate:a", 0.0, 0.5)
 	await get_tree().create_timer(0.3).timeout
 	tween.tween_callback(queue_free)
+	set_process(false)   
 	
 
 func recibir_golpe():

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5jpx2gs7rsu7"
-path="res://.godot/imported/heart.webp-8446862276a68425d38a1b49ab3fca3f.ctex"
+path="res://.godot/imported/heart.webp-9b93518b0e5fed593592ff2d98ffbc4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/mundos/pruebas/heart.webp"
-dest_files=["res://.godot/imported/heart.webp-8446862276a68425d38a1b49ab3fca3f.ctex"]
+source_file="res://Assests/objetos/corazones/heart.webp"
+dest_files=["res://.godot/imported/heart.webp-9b93518b0e5fed593592ff2d98ffbc4e.ctex"]
 
 [params]
 
