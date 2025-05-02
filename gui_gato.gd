@@ -1,4 +1,6 @@
 extends CanvasLayer
+
+@onready var gato = get_node("/Assests/GatoBlanco/Gato")
 @onready var moneda_label=$moneda_label
 var coin_count = 0
 @export var heart_texture : Texture2D
@@ -15,7 +17,10 @@ func take_damage(amount: int = 1):
 	current_hearts = max(current_hearts - amount, 0)
 	update_hearts()
 	if current_hearts <= 0:
-		print("¡Jugador muerto!")
+		gato.set_process(false) 
+		await get_tree().create_timer(1).timeout
+		get_tree().reload_current_scene()
+	
 
 func update_hearts():
 	for i in range(max_hearts):
@@ -31,8 +36,3 @@ func _on_moneda_collected():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	update_hearts()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

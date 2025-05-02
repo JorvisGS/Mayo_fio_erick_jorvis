@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dibh14f0arncu"]
+[gd_scene load_steps=6 format=3 uid="uid://dibh14f0arncu"]
 
 [ext_resource type="Texture2D" uid="uid://tlvb3b3c432o" path="res://Assests/monedas/moneda.png" id="1_5nuiy"]
 [ext_resource type="Script" path="res://gui_gato.gd" id="1_8wl31"]
 [ext_resource type="FontFile" uid="uid://mf1opp6a403y" path="res://Daydream.ttf" id="3_2i8b5"]
+[ext_resource type="Texture2D" uid="uid://b5jpx2gs7rsu7" path="res://Assests/mundos/pruebas/heart.webp" id="4_i8uju"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kgpgu"]
 font = ExtResource("3_2i8b5")
@@ -24,3 +25,34 @@ offset_right = 142.0
 offset_bottom = 73.0
 text = "X 0"
 label_settings = SubResource("LabelSettings_kgpgu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/TextureRect"]
+position = Vector2(59, 131)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_i8uju")
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/TextureRect2"]
+position = Vector2(59, 131)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_i8uju")
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/TextureRect3"]
+position = Vector2(59, 131)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("4_i8uju")

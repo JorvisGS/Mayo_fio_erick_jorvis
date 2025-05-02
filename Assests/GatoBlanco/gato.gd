@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var gravedad = 100
 @export var salto = 50
 @export var velocidad = 100
-
+var puede_moverse: bool = true
 
 
 
@@ -42,7 +42,8 @@ func _process(delta: float) -> void:
 	var izquierda = Input.is_action_just_pressed("izquierda")
 	#variable direccion
 	var direccion = Input.get_axis("izquierda","derecha")
-	velocity.x = velocidad * direccion
+	if puede_moverse:
+		velocity.x = velocidad * direccion
 	
 	if  salto_presionado and is_on_floor():
 		velocity.y += -salto
@@ -59,7 +60,21 @@ func _process(delta: float) -> void:
 		quieto(true)
 	
 	move_and_slide()
+	#funciones de daño
+func morir():
+	var tween = create_tween()
+	tween.tween_property(self, "modulate:a", 0.0, 0.5)
+	await get_tree().create_timer(0.3).timeout
+	tween.tween_callback(queue_free)
+	
 
+func recibir_golpe():
+	var jump_force = -100
+	velocity.x = 0
+	velocity.y = jump_force
+	puede_moverse = false
+	await get_tree().create_timer(0.4).timeout
+	puede_moverse = true
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.

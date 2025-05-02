@@ -2,6 +2,7 @@ extends Area2D
 # Called when the node enters the scene tree for the first time.
 
 signal collected
+
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var maquinaEstados: AnimationTree = $AnimationTree
 func moneda_normal(actiado:bool):

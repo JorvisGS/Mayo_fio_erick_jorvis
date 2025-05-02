@@ -150,4 +150,4 @@ anim_player = NodePath("../Sprite2D/AnimationPlayer")
 parameters/conditions/caminando = false
 parameters/conditions/cayendo = false
 "parameters/conditions/daño" = false
-parameters/conditions/quieto = false
+parameters/conditions/quieto = true
