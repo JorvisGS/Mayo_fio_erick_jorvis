@@ -5,13 +5,14 @@ extends CharacterBody2D
 @export var salto = 50
 @export var velocidad = 100
 var puede_moverse: bool = true
-
+var atacando = false
 
 
 #animaciones
 @onready var animation_player: AnimationPlayer = $Sprite2D/AnimationPlayer
 @onready var maquinaEstados:AnimationTree = $AnimationTree
-@onready var sprite:Sprite2D = $Sprite2D	
+@onready var sprite:Sprite2D = $Sprite2D
+@onready var attack_area =$area_atck
 func quieto(actiado:bool):
 	maquinaEstados["parameters/conditions/quieto"] = actiado
 	maquinaEstados["parameters/conditions/caminando"] = not actiado
@@ -31,7 +32,8 @@ func reproducir_animacion_daño():
 
 func _process(delta: float) -> void:
 	animation_player.play("daño")
-	
+	if Input.is_action_just_pressed("atacar"):
+		atacar()
 	
 	#gravedad
 	if not is_on_floor():
@@ -41,6 +43,7 @@ func _process(delta: float) -> void:
 	var salto_presionado = Input.is_action_just_pressed("saltar")
 	var derecha = Input.is_action_just_pressed("derecha")
 	var izquierda = Input.is_action_just_pressed("izquierda")
+	var atacar = Input.is_action_just_pressed("atacar")
 	#variable direccion
 	var direccion = Input.get_axis("izquierda","derecha")
 	if puede_moverse:
@@ -78,5 +81,17 @@ func recibir_golpe():
 	await get_tree().create_timer(0.4).timeout
 	puede_moverse = true
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+func atacar():
+	print("ataque")
+	atacando = true
+	attack_area.monitoring = true  # activa el área de daño
+	await get_tree().create_timer(0.2).timeout  # espera 0.2 segundos
+	attack_area.monitoring = false  # desactiva el área
+	atacando = false
+
+
+func _on_area_atck_area_entered(area: Area2D) -> void:
+	if area.is_in_group("enemigos"):
+		var enemigo = area.get_parent()
+		if enemigo.has_method("recibir_golpe"):
+			enemigo.recibir_golpe(1)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://cquxox3bwajai"]
+[gd_scene load_steps=13 format=3 uid="uid://cquxox3bwajai"]
 
 [ext_resource type="Script" path="res://Assests/enemigos/Slime/slime_2d.gd" id="1_j2hln"]
 [ext_resource type="Texture2D" uid="uid://ch4x76v6qegpu" path="res://Assests/enemigos/Slime/sprite/red-slime-spritesheet.png" id="1_u75sg"]
 [ext_resource type="PackedScene" uid="uid://bgtmb42f6nbij" path="res://Assests/scenas/zona_muerte.tscn" id="2_rkwle"]
+[ext_resource type="Script" path="res://Assests/enemigos/Slime/areadaño.gd" id="4_0i4t6"]
 
 [sub_resource type="Animation" id="Animation_mdws3"]
 length = 0.001
@@ -58,6 +59,8 @@ transitions = ["Start", "caminando", SubResource("AnimationNodeStateMachineTrans
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jhhib"]
 size = Vector2(14, 9)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7m50g"]
+
 [node name="slime" type="Node2D"]
 script = ExtResource("1_j2hln")
 
@@ -101,3 +104,12 @@ target_position = Vector2(-6, 5)
 [node name="RayCastabajo2" type="RayCast2D" parent="."]
 position = Vector2(0, -5)
 target_position = Vector2(6, 5)
+
+[node name="areadaño" type="Area2D" parent="." groups=["enemigos"]]
+script = ExtResource("4_0i4t6")
+
+[node name="daño" type="CollisionShape2D" parent="areadaño"]
+position = Vector2(-1, -4)
+shape = SubResource("CircleShape2D_7m50g")
+
+[connection signal="daño_recibido" from="areadaño" to="." method="_on_areadaño_daño_recibido"]
