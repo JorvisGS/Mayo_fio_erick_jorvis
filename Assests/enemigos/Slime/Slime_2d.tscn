@@ -56,7 +56,7 @@ states/caminando/position = Vector2(362, 144)
 transitions = ["Start", "caminando", SubResource("AnimationNodeStateMachineTransition_wfeap")]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jhhib"]
-size = Vector2(12, 8)
+size = Vector2(14, 9)
 
 [node name="slime" type="Node2D"]
 script = ExtResource("1_j2hln")
@@ -81,7 +81,7 @@ anim_player = NodePath("../Sprite2D/AnimationPlayer")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaMuerte"]
 light_mask = 4
 visibility_layer = 2
-position = Vector2(0, -4)
+position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_jhhib")
 
 [node name="RayCastderecha" type="RayCast2D" parent="."]
@@ -96,8 +96,8 @@ target_position = Vector2(-8, 0)
 
 [node name="RayCastabajo" type="RayCast2D" parent="."]
 position = Vector2(0, -5)
-target_position = Vector2(-5, 5)
+target_position = Vector2(-6, 5)
 
 [node name="RayCastabajo2" type="RayCast2D" parent="."]
 position = Vector2(0, -5)
-target_position = Vector2(5, 5)
+target_position = Vector2(6, 5)

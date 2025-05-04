@@ -1,5 +1,8 @@
 extends CanvasLayer
 
+func _ready() -> void:
+	update_hearts()
+	gato = get_parent().get_node("gato")
 @onready var gato = get_node("../CharacterBody2D")
 @onready var moneda_label=$moneda_label
 var coin_count = 0
@@ -39,8 +42,7 @@ func _on_moneda_collected():
 	moneda_label.text="X: "+ str(coin_count)
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	update_hearts()
+
 
 
 func _on_lata_comida_comida() -> void:

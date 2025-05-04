@@ -4,15 +4,16 @@
 [ext_resource type="Script" path="res://Assests/objetos/lata_comida/lata_comida.gd" id="1_k4t6e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dulmx"]
-size = Vector2(9.5, 12.5)
+size = Vector2(9.5, 15)
 
 [node name="lata_comida" type="Area2D"]
 script = ExtResource("1_k4t6e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.419505, 0.419505)
+position = Vector2(4.76837e-07, -1)
+scale = Vector2(0.553503, 0.584753)
 texture = ExtResource("1_3gk6g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.25, 0.75)
+position = Vector2(0.25, -0.5)
 shape = SubResource("RectangleShape2D_dulmx")
