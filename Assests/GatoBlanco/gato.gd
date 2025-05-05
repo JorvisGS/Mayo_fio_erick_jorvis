@@ -52,7 +52,7 @@ func _process(delta: float) -> void:
 	if  salto_presionado and is_on_floor():
 		velocity.y += -salto
 		cayendo(true)
-
+	
 	#animaciones#condiciones
 	if direccion == 1:
 		caminando(true)
@@ -82,7 +82,6 @@ func recibir_golpe():
 	puede_moverse = true
 
 func atacar():
-	print("ataque")
 	atacando = true
 	attack_area.monitoring = true  # activa el área de daño
 	await get_tree().create_timer(0.2).timeout  # espera 0.2 segundos
@@ -91,7 +90,7 @@ func atacar():
 
 
 func _on_area_atck_area_entered(area: Area2D) -> void:
-	if area.is_in_group("enemigos"):
+	if area.is_in_group("enemigos") and atacando == true:
 		var enemigo = area.get_parent()
 		if enemigo.has_method("recibir_golpe"):
 			enemigo.recibir_golpe(1)
