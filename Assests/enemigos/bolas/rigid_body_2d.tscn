@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgg3ca58k6164"]
+
+[ext_resource type="Script" path="res://Assests/enemigos/bolas/rigid_body_2d.gd" id="1_4tfrk"]
+[ext_resource type="Texture2D" uid="uid://croelmh11yskp" path="res://Assests/enemigos/bolas/Spiked Ball.png" id="1_pivw6"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lb30l"]
+friction = 0.59
+bounce = 0.41
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6tri5"]
+radius = 13.0384
+
+[node name="bola" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_lb30l")
+script = ExtResource("1_4tfrk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pivw6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6tri5")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 14)

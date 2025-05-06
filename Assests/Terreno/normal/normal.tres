@@ -1,6 +1,9 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://d0yp4p5yg81jv"]
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://d0yp4p5yg81jv"]
 
 [ext_resource type="Texture2D" uid="uid://dlqe1g8jivv2o" path="res://Assests/Terreno/normal/Terrain (16 x 16).png" id="1_tugsr"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_62ykn"]
+bounce = 0.71
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_khkvf"]
 texture = ExtResource("1_tugsr")
@@ -298,6 +301,7 @@ texture = ExtResource("1_tugsr")
 
 [resource]
 physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_62ykn")
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.695809, 0.146023, 1.92523e-07, 1)
