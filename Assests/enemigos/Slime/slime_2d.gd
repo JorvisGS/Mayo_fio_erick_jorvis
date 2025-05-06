@@ -28,7 +28,13 @@ func morir() -> void:
 	tween.tween_property(self, "modulate:a", 0.0, 0.5)
 	await get_tree().create_timer(0.3).timeout  # Espera 0.3 segundos
 	queue_free()  # Elimina el enemigo
+	llamada_inter()
 	set_process(false)
+
+func llamada_inter():
+	var canvas_layer = get_parent().get_parent().get_node("CanvasLayer")
+	canvas_layer.update_puntuacion()
+
 
 func _physics_process(delta: float) -> void:
 	
