@@ -13,6 +13,7 @@ var atacando = false
 @onready var maquinaEstados:AnimationTree = $AnimationTree
 @onready var sprite:Sprite2D = $Sprite2D
 @onready var attack_area =$area_atck
+
 func quieto(actiado:bool):
 	maquinaEstados["parameters/conditions/quieto"] = actiado
 	maquinaEstados["parameters/conditions/caminando"] = not actiado
@@ -28,10 +29,14 @@ func reproducir_animacion_daño():
 	animation_player.play("daño")
 	await get_tree().create_timer(0.3).timeout
 	maquinaEstados.active = true
-
+func reproducir_animacion_ataque():
+	maquinaEstados.active = false
+	animation_player.play("ataque")
+	await get_tree().create_timer(0.1).timeout
+	maquinaEstados.active = true
 
 func _process(delta: float) -> void:
-	animation_player.play("daño")
+	
 	if Input.is_action_just_pressed("atacar"):
 		atacar()
 	
@@ -43,11 +48,12 @@ func _process(delta: float) -> void:
 	var salto_presionado = Input.is_action_just_pressed("saltar")
 	var derecha = Input.is_action_just_pressed("derecha")
 	var izquierda = Input.is_action_just_pressed("izquierda")
-	var atacar = Input.is_action_just_pressed("atacar")
+	var atacarF = Input.is_action_just_pressed("atacar")
 	#variable direccion
 	var direccion = Input.get_axis("izquierda","derecha")
 	if puede_moverse:
 		velocity.x = velocidad * direccion
+	
 	
 	if  salto_presionado and is_on_floor():
 		velocity.y += -salto
@@ -74,6 +80,7 @@ func morir():
 	
 
 func recibir_golpe():
+	animation_player.play("daño")
 	var jump_force = -100
 	velocity.x = 0
 	velocity.y = jump_force
@@ -82,6 +89,7 @@ func recibir_golpe():
 	puede_moverse = true
 
 func atacar():
+	animation_player.play("ataque")
 	atacando = true
 	attack_area.monitoring = true  # activa el área de daño
 	await get_tree().create_timer(0.2).timeout  # espera 0.2 segundos
