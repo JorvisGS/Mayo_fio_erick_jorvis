@@ -155,7 +155,7 @@ position = Vector2(532, 365)
 [node name="bolas" type="Node2D" parent="."]
 
 [node name="bola" parent="bolas" instance=ExtResource("7_ulbgv")]
-position = Vector2(225, 335)
+position = Vector2(224, 299)
 
 [connection signal="collected" from="monedas/moneda" to="CanvasLayer" method="_on_moneda_collected"]
 [connection signal="collected" from="monedas/moneda2" to="CanvasLayer" method="_on_moneda_collected"]
