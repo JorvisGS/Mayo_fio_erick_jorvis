@@ -10,7 +10,7 @@ var coin_count = 0
 var max_hearts := 3
 var current_hearts := 3
 var puntuacion :=0
-
+#aaaaaaaaaaaaaaaaaaaaa
 @onready var hearts := [
 	$HBoxContainer/TextureRect,
 	$HBoxContainer/TextureRect2,
