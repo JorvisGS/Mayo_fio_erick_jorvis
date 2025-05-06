@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=4 uid="uid://blcsc2mg4ydlw"]
+[gd_scene load_steps=8 format=4 uid="uid://duayedsgfaqva"]
 
+<<<<<<< HEAD:Assests/Terreno/fondos/nubesDia/mundo_1.tscn
 [ext_resource type="PackedScene" uid="uid://dibh14f0arncu" path="res://Assests/interfaz/personaje/gui_gato.tscn" id="1_dic8w"]
 [ext_resource type="TileSet" uid="uid://d0yp4p5yg81jv" path="res://Assests/Terreno/normal/normal.tres" id="1_itrjj"]
 [ext_resource type="PackedScene" uid="uid://dad3gyq7o4s6e" path="res://Assests/GatoBlanco/Gato.tscn" id="2_qbvpt"]
@@ -7,13 +8,21 @@
 [ext_resource type="PackedScene" uid="uid://cbc4hx7etsgip" path="res://Assests/objetos/monedas/moneda.tscn" id="4_38fsf"]
 [ext_resource type="PackedScene" uid="uid://cquxox3bwajai" path="res://Assests/enemigos/Slime/Slime_2d.tscn" id="5_ykr4f"]
 [ext_resource type="PackedScene" uid="uid://cgg3ca58k6164" path="res://Assests/enemigos/bolas/rigid_body_2d.tscn" id="7_ulbgv"]
+=======
+[ext_resource type="PackedScene" uid="uid://dibh14f0arncu" path="res://Assests/interfaz/personaje/gui_gato.tscn" id="1_iuet5"]
+[ext_resource type="PackedScene" uid="uid://dad3gyq7o4s6e" path="res://Assests/GatoBlanco/Gato.tscn" id="2_67f2f"]
+[ext_resource type="TileSet" uid="uid://d0yp4p5yg81jv" path="res://Assests/Terreno/normal/normal.tres" id="3_syf5g"]
+[ext_resource type="PackedScene" uid="uid://ctisjphhyvo34" path="res://Assests/Terreno/fondos/nubesDia/fondo1.tscn" id="4_gww8h"]
+[ext_resource type="PackedScene" uid="uid://cbc4hx7etsgip" path="res://Assests/objetos/monedas/moneda.tscn" id="5_c84l3"]
+[ext_resource type="PackedScene" uid="uid://cquxox3bwajai" path="res://Assests/enemigos/Slime/Slime_2d.tscn" id="6_qwrjx"]
+>>>>>>> c17ef9b1389ed371d982f5ccab841438229f060c:Assests/mundos/mundo_1.tscn
 
 [node name="mundo1" type="Node2D"]
 position = Vector2(-4, -77)
 
-[node name="CanvasLayer" parent="." instance=ExtResource("1_dic8w")]
+[node name="CanvasLayer" parent="." instance=ExtResource("1_iuet5")]
 
-[node name="gato" parent="." instance=ExtResource("2_qbvpt")]
+[node name="gato" parent="." instance=ExtResource("2_67f2f")]
 position = Vector2(131, 363)
 collision_layer = 3
 collision_mask = 3
@@ -26,130 +35,130 @@ limit_bottom = 319
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." groups=["suelo"]]
 tile_map_data = PackedByteArray("AAAAABgAAAADAAEAAAABABgAAAACAAMAAAACABgAAAAEAAEAAAADABgAAAAGAAMAAAAEABgAAAAEAAEAAAAFABgAAAACAAMAAAAGABgAAAAGAAMAAAAHABgAAAAEAAEAAAAIABgAAAAEAAEAAAAJABgAAAACAAMAAAAKABgAAAAEAAEAAAALABgAAAACAAMAAAAMABgAAAACAAMAAAANABgAAAACAAMAAAAOABgAAAAEAAEAAAAPABgAAAAEAAEAAAAQABgAAAAGAAMAAAARABgAAAAEAAEAAAASABgAAAAEAAEAAAATABgAAAAGAAMAAAAUABgAAAAGAAMAAAAVABgAAAAGAAMAAAAWABgAAAADAAMAAAAXABgAAAAEAAUAAAAYABgAAAAEAAQAAAAZABgAAAAEAAMAAAAaABgAAAAFAAMAAAAbABgAAAACAAMAAAAcABgAAAAEAAEAAAAdABgAAAAEAAEAAAAeABgAAAACAAMAAAAfABgAAAACAAMAAAAgABgAAAACAAMAAAAhABgAAAACAAMAAAAiABgAAAAGAAMAAAAjABgAAAACAAMAAAAkABgAAAACAAMAAAAlABgAAAAGAAMAAAAmABgAAAACAAMAAAAnABgAAAADAAMAAAAoABgAAAAEAAIAAAApABgAAAAEAAIAAAAqABgAAAAEAAMAAAArABgAAAAFAAMAAAAsABgAAAAGAAMAAAAtABgAAAACAAMAAAAuABgAAAAEAAEAAAAvABgAAAAGAAMAAAAwABgAAAACAAMAAAAxABgAAAACAAMAAAAyABgAAAAGAAMAAAAzABgAAAACAAMAAAA0ABgAAAADAAMAAAA1ABgAAAAEAAMAAAA2ABgAAAAEAAMAAAA3ABgAAAAEAAIAAAA4ABgAAAAEAAMAAAA5ABgAAAAEAAIAAAA6ABgAAAAFAAMAAAA7ABgAAAAEAAEAAAA8ABgAAAACAAMAAAA9ABgAAAACAAMAAAA+ABgAAAACAAMAAAA/ABgAAAADAAMAAABAABgAAAAFAAMAAABBABgAAAAGAAMAAABCABgAAAADAAMAAABDABgAAAAEAAMAAABEABgAAAAFAAIAAABGABgAAAADAAUAAABHABgAAAAFAAMAAABHABkAAAACAAQAAABGABkAAAABAAQAAABEABkAAAAHAAQAAABDABkAAAACAAQAAABCABkAAAAEAAYAAABBABkAAAAGAAQAAABAABkAAAAGAAQAAAA/ABkAAAACAAQAAAA+ABkAAAAGAAQAAAA9ABkAAAAEAAYAAAA8ABkAAAAGAAQAAAA7ABkAAAACAAQAAAA6ABkAAAAEAAYAAAA5ABkAAAAGAAQAAAA4ABkAAAACAAQAAAA3ABkAAAACAAQAAAA2ABkAAAAEAAYAAAA1ABkAAAAGAAQAAAA0ABkAAAAEAAYAAAAzABkAAAACAAQAAAAyABkAAAAGAAQAAAAxABkAAAACAAQAAAAwABkAAAAGAAQAAAAvABkAAAACAAQAAAAuABkAAAAGAAQAAAAtABkAAAAEAAYAAAAsABkAAAACAAQAAAArABkAAAACAAQAAAAqABkAAAAGAAQAAAApABkAAAACAAQAAAAoABkAAAAEAAYAAAAnABkAAAAGAAQAAAAmABkAAAAEAAYAAAAlABkAAAAGAAQAAAAkABkAAAACAAQAAAAjABkAAAAGAAQAAAAiABkAAAACAAQAAAAhABkAAAAEAAYAAAAgABkAAAAGAAQAAAAfABkAAAACAAQAAAAeABkAAAACAAQAAAAdABkAAAACAAQAAAAcABkAAAAGAAQAAAAbABkAAAAGAAQAAAAaABkAAAACAAQAAAAZABkAAAAGAAQAAAAYABkAAAAGAAQAAAAXABkAAAAEAAYAAAAWABkAAAACAAQAAAAVABkAAAACAAQAAAAUABkAAAAEAAYAAAATABkAAAAEAAYAAAASABkAAAAEAAYAAAARABkAAAACAAQAAAAQABkAAAACAAQAAAAPABkAAAACAAQAAAAOABkAAAAGAAQAAAANABkAAAACAAQAAAAMABkAAAACAAQAAAALABkAAAACAAQAAAAKABkAAAACAAQAAAAJABkAAAAGAAQAAAAIABkAAAAGAAQAAAAHABkAAAAEAAYAAAAGABkAAAAEAAYAAAAFABkAAAACAAQAAAAEABkAAAAGAAQAAAADABkAAAACAAQAAAACABkAAAAEAAYAAAABABkAAAAEAAYAAAAAABkAAAABAAQAAAAWABcAAAABAAMAAAAXABcAAAADAAMAAAAYABcAAAAEAAMAAAAZABcAAAAEAAIAAAAaABcAAAAFAAUAAAAXABYAAAABAAMAAAAYABYAAAAGAAMAAAAZABYAAAAGAAMAAAAaABYAAAAHAAMAAAAnABcAAAADAAIAAAAoABcAAAAEAAMAAAApABcAAAAEAAMAAAAqABcAAAAFAAMAAAArABcAAAAHAAMAAAAqABYAAAAHAAMAAAApABYAAAAGAAMAAAAoABYAAAACAAMAAAAnABYAAAABAAMAAAA0ABcAAAADAAEAAAA1ABcAAAADAAMAAAA2ABcAAAAEAAUAAAA3ABcAAAAEAAUAAAA4ABcAAAAEAAMAAAA3ABYAAAAEAAQAAAA2ABYAAAAEAAUAAAA4ABYAAAAFAAMAAAA1ABYAAAADAAUAAAA3ABUAAAAEAAEAAAA2ABUAAAAGAAMAAAA1ABUAAAACAAMAAAA0ABUAAAAKAAMAAAAzABUAAAAKAAMAAAAyABUAAAAKAAMAAAAxABUAAAAMAAMAAAAwABUAAAAKAAMAAAAvABUAAAAKAAMAAAAuABUAAAAJAAMAAAA4ABUAAAAHAAMAAAA5ABcAAAAFAAMAAAA5ABYAAAAFAAEAAAA6ABcAAAAFAAEAAABDABcAAAAEAAMAAABDABYAAAADAAMAAABDABUAAAADAAIAAABDABQAAAADAAIAAABDABMAAAADAAUAAABDABIAAAADAAEAAABEABIAAAAHAAMAAABEABMAAAAFAAIAAABEABQAAAAFAAIAAABEABUAAAAFAAIAAABEABYAAAAFAAIAAABEABcAAAAFAAIAAABAABcAAAAFAAUAAABAABYAAAAFAAIAAABAABUAAAAFAAIAAABAABQAAAAFAAEAAAA/ABQAAAABAAMAAAA/ABUAAAADAAIAAAA/ABYAAAADAAIAAAA/ABcAAAADAAIAAAA8ABcAAAALAAQAAABGABQAAAADAAYAAABGABYAAAADAAEAAABGABcAAAADAAUAAABGABMAAAABAAMAAABIABgAAAACAAMAAABJABgAAAAGAAMAAABJABkAAAACAAQAAABIABkAAAAGAAQAAABKABgAAAADAAMAAABKABkAAAAGAAQAAABLABkAAAAGAAQAAABLABgAAAAEAAIAAABLABcAAAADAAMAAABLABYAAAABAAMAAABKABcAAAABAAMAAABMABYAAAAHAAMAAABMABcAAAAFAAIAAABMABgAAAAFAAIAAABMABkAAAAFAAYAAAA8ABYAAAALAAEAAAAAAAkAAAADAAEAAAABAAkAAAAEAAEAAAACAAkAAAAFAAEAAAAAAAoAAAADAAIAAAABAAoAAAAEAAIAAAACAAoAAAAFAAIAAAAAAAsAAAADAAIAAAABAAsAAAAEAAIAAAACAAsAAAAFAAMAAAAAAAwAAAADAAIAAAABAAwAAAAEAAIAAAACAAwAAAAEAAMAAAAAAA0AAAADAAIAAAABAA0AAAAEAAIAAAACAA0AAAAEAAMAAAAAAA4AAAADAAIAAAABAA4AAAAEAAIAAAACAA4AAAAEAAMAAAAAAA8AAAADAAIAAAABAA8AAAAEAAIAAAACAA8AAAAEAAMAAAAAABAAAAADAAIAAAABABAAAAAEAAIAAAACABAAAAAEAAMAAAAAABEAAAADAAIAAAABABEAAAAEAAIAAAACABEAAAAEAAMAAAAAABIAAAADAAIAAAABABIAAAAEAAIAAAACABIAAAAEAAMAAAAAABMAAAADAAIAAAABABMAAAAEAAIAAAACABMAAAAEAAMAAAAAABQAAAADAAIAAAABABQAAAAEAAIAAAACABQAAAAEAAMAAAAAABUAAAADAAIAAAABABUAAAAEAAIAAAACABUAAAAEAAMAAAAAABYAAAADAAIAAAABABYAAAAEAAIAAAACABYAAAAEAAMAAAAAABcAAAADAAIAAAABABcAAAAEAAIAAAACABcAAAAEAAMAAAADAAsAAAAHAAMAAAADAAwAAAAFAAIAAAADAA0AAAAFAAIAAAADAA4AAAAFAAIAAAADAA8AAAAFAAIAAAADABAAAAAFAAIAAAADABEAAAAFAAIAAAADABIAAAAFAAMAAAAEABIAAAAGAAMAAAAFABIAAAAHAAMAAAAEABMAAAAEAAIAAAAFABMAAAAFAAIAAAAEABQAAAAEAAIAAAAFABQAAAAFAAIAAAAEABUAAAAEAAIAAAAFABUAAAAFAAIAAAAEABYAAAAEAAIAAAAFABYAAAAFAAIAAAAEABcAAAAEAAIAAAAFABcAAAAFAAIAAAADABMAAAAEAAMAAAADABQAAAAEAAMAAAADABUAAAAEAAMAAAADABYAAAAEAAMAAAADABcAAAAEAAMAAABCABYAAAABAAMAAABCABcAAAADAAIAAABHABMAAAAFAAEAAABHABQAAAAFAAYAAABHABYAAAAFAAEAAABHABcAAAAFAAUAAAA=")
-tile_set = ExtResource("1_itrjj")
+tile_set = ExtResource("3_syf5g")
 
-[node name="ParallaxBackground" parent="TileMapLayer" instance=ExtResource("3_1fssm")]
+[node name="ParallaxBackground" parent="TileMapLayer" instance=ExtResource("4_gww8h")]
 
 [node name="monedas" type="Node2D" parent="."]
 
-[node name="moneda" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(399, 342)
 collision_layer = 3
 
-[node name="moneda2" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda2" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(652, 342)
 collision_layer = 3
 
-[node name="moneda3" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda3" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(732, 357)
 collision_layer = 3
 
-[node name="moneda4" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda4" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(748, 357)
 collision_layer = 3
 
-[node name="moneda5" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda5" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(764, 357)
 collision_layer = 3
 
-[node name="moneda6" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda6" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(780, 357)
 collision_layer = 3
 
-[node name="moneda7" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda7" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(796, 357)
 collision_layer = 3
 
-[node name="moneda8" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda8" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(812, 357)
 collision_layer = 3
 
-[node name="moneda9" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda9" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(828, 357)
 collision_layer = 3
 
-[node name="moneda10" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda10" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(844, 357)
 collision_layer = 3
 
-[node name="moneda19" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda19" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(968, 343)
 collision_layer = 3
 
-[node name="moneda20" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda20" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(1017, 308)
 collision_layer = 3
 
-[node name="moneda21" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda21" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(1032, 308)
 collision_layer = 3
 
-[node name="moneda22" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda22" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(1081, 279)
 collision_layer = 3
 
-[node name="moneda24" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda24" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(1135, 295)
 collision_layer = 3
 
-[node name="moneda25" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda25" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(1129, 343)
 collision_layer = 3
 
-[node name="moneda26" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda26" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(1145, 343)
 collision_layer = 3
 
-[node name="moneda27" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda27" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(1048, 375)
 collision_layer = 3
 
-[node name="moneda28" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda28" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(1001, 375)
 collision_layer = 3
 
-[node name="moneda23" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda23" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(1095, 279)
 collision_layer = 3
 
-[node name="moneda13" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda13" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(780, 373)
 collision_layer = 3
 
-[node name="moneda14" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda14" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(764, 373)
 collision_layer = 3
 
-[node name="moneda15" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda15" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(748, 373)
 collision_layer = 3
 
-[node name="moneda16" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda16" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(748, 373)
 collision_layer = 3
 
-[node name="moneda17" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda17" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(732, 373)
 collision_layer = 3
 
-[node name="moneda18" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda18" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(716, 373)
 collision_layer = 3
 
-[node name="moneda11" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda11" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(812, 373)
 collision_layer = 3
 
-[node name="moneda12" parent="monedas" instance=ExtResource("4_38fsf")]
+[node name="moneda12" parent="monedas" instance=ExtResource("5_c84l3")]
 position = Vector2(796, 373)
 collision_layer = 3
 
 [node name="slimes" type="Node2D" parent="."]
 
-[node name="slime4" parent="slimes" instance=ExtResource("5_ykr4f")]
+[node name="slime4" parent="slimes" instance=ExtResource("6_qwrjx")]
 position = Vector2(340, 373)
 
-[node name="slime" parent="slimes" instance=ExtResource("5_ykr4f")]
+[node name="slime" parent="slimes" instance=ExtResource("6_qwrjx")]
 position = Vector2(532, 365)
 
 [node name="bolas" type="Node2D" parent="."]

@@ -24,7 +24,7 @@ func take_damage(amount: int = 1):
 		gato.morir()
 		await get_tree().create_timer(1).timeout
 		get_tree().reload_current_scene()
-
+#aaaaaaaaaaa
 func heal(amount: int = 1):
 	current_hearts = clamp(current_hearts + amount, 0, max_hearts)
 	update_hearts()
