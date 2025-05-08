@@ -147,7 +147,7 @@ collision_layer = 3
 [node name="slimes" type="Node2D" parent="."]
 
 [node name="slime4" parent="slimes" instance=ExtResource("6_y1vgx")]
-position = Vector2(340, 373)
+position = Vector2(298, 354)
 
 [node name="slime" parent="slimes" instance=ExtResource("6_y1vgx")]
 position = Vector2(532, 365)

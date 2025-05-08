@@ -25,8 +25,8 @@ func recibir_golpe(daño: int) -> void:
 # Función para manejar la muerte del enemigo
 func morir() -> void:
 	var tween = create_tween()
-	tween.tween_property(self, "modulate:a", 0.0, 0.5)
-	await get_tree().create_timer(0.1).timeout  # Espera 0.3 segundos
+	tween.tween_property(self, "modulate:a", 0.0, 0.2)
+	await get_tree().create_timer(0.1).timeout
 	queue_free()  # Elimina el enemigo
 	llamada_inter()
 	set_process(false)

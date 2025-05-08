@@ -32,13 +32,13 @@ func reproducir_animacion_daño():
 func reproducir_animacion_ataque():
 	maquinaEstados.active = false
 	animation_player.play("ataque")
-	await get_tree().create_timer(0.1).timeout
+	atacar()
+	await get_tree().create_timer(0.4).timeout
 	maquinaEstados.active = true
 
 func _process(delta: float) -> void:
 	
-	if Input.is_action_just_pressed("atacar"):
-		atacar()
+	
 	
 	#gravedad
 	if not is_on_floor():
@@ -53,7 +53,8 @@ func _process(delta: float) -> void:
 	var direccion = Input.get_axis("izquierda","derecha")
 	if puede_moverse:
 		velocity.x = velocidad * direccion
-	
+	if atacarF:
+		reproducir_animacion_ataque()
 	
 	if  salto_presionado and is_on_floor():
 		velocity.y += -salto
@@ -89,7 +90,6 @@ func recibir_golpe():
 	puede_moverse = true
 
 func atacar():
-	animation_player.play("ataque")
 	atacando = true
 	attack_area.monitoring = true  # activa el área de daño
 	await get_tree().create_timer(0.2).timeout  # espera 0.2 segundos
