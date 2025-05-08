@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://duayedsgfaqva"]
+[gd_scene load_steps=10 format=4 uid="uid://duayedsgfaqva"]
 
 [ext_resource type="PackedScene" uid="uid://dibh14f0arncu" path="res://Assests/interfaz/personaje/gui_gato.tscn" id="1_bmqxg"]
 [ext_resource type="PackedScene" uid="uid://dad3gyq7o4s6e" path="res://Assests/GatoBlanco/Gato.tscn" id="2_mg7c7"]
@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cbc4hx7etsgip" path="res://Assests/objetos/monedas/moneda.tscn" id="5_iy35t"]
 [ext_resource type="PackedScene" uid="uid://cquxox3bwajai" path="res://Assests/enemigos/Slime/Slime_2d.tscn" id="6_y1vgx"]
 [ext_resource type="PackedScene" uid="uid://cgg3ca58k6164" path="res://Assests/enemigos/bolas/rigid_body_2d.tscn" id="7_j1l0g"]
+[ext_resource type="PackedScene" uid="uid://bgtmb42f6nbij" path="res://Assests/scenas/zona_muerte.tscn" id="8_wvb74"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wbd4c"]
+radius = 18.0278
 
 [node name="mundo1" type="Node2D"]
 position = Vector2(-4, -77)
@@ -14,7 +18,7 @@ position = Vector2(-4, -77)
 [node name="CanvasLayer" parent="." instance=ExtResource("1_bmqxg")]
 
 [node name="gato" parent="." instance=ExtResource("2_mg7c7")]
-position = Vector2(131, 363)
+position = Vector2(173, 252)
 collision_layer = 3
 collision_mask = 3
 
@@ -155,7 +159,15 @@ position = Vector2(532, 365)
 [node name="bolas" type="Node2D" parent="."]
 
 [node name="bola" parent="bolas" instance=ExtResource("7_j1l0g")]
-position = Vector2(1187, 300)
+position = Vector2(268, 309)
+
+[node name="ZonaMuerte2" parent="bolas/bola" instance=ExtResource("8_wvb74")]
+position = Vector2(-241, -301)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bolas/bola/ZonaMuerte2"]
+visible = false
+position = Vector2(241, 301)
+shape = SubResource("CircleShape2D_wbd4c")
 
 [connection signal="collected" from="monedas/moneda" to="CanvasLayer" method="_on_moneda_collected"]
 [connection signal="collected" from="monedas/moneda2" to="CanvasLayer" method="_on_moneda_collected"]

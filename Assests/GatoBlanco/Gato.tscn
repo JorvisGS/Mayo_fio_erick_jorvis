@@ -116,7 +116,7 @@ transitions = ["Start", "quieto", SubResource("AnimationNodeStateMachineTransiti
 graph_offset = Vector2(-122, -56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wj1tt"]
-size = Vector2(18.75, 7.5)
+size = Vector2(22.75, 11.5)
 
 [node name="gato" type="CharacterBody2D" groups=["jugador"]]
 script = ExtResource("1_bsw44")
@@ -152,7 +152,7 @@ parameters/conditions/quieto = false
 [node name="area_atck" type="Area2D" parent="." groups=["jugador"]]
 
 [node name="AtckCollisionShape2D" type="CollisionShape2D" parent="area_atck"]
-position = Vector2(10.625, 11.75)
+position = Vector2(12.625, 9.75)
 shape = SubResource("RectangleShape2D_wj1tt")
 
 [connection signal="area_entered" from="area_atck" to="." method="_on_area_atck_area_entered"]
