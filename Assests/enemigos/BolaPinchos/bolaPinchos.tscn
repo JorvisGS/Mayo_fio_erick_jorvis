@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcmk7a0yat6ca"]
+
+[ext_resource type="Texture2D" uid="uid://8uqer8vkyt6" path="res://Assests/enemigos/BolaPinchos/BolaPinchos.png" id="1_hbl8w"]
+[ext_resource type="PackedScene" uid="uid://bgtmb42f6nbij" path="res://Assests/scenas/zona_muerte.tscn" id="2_xlsou"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_38gij"]
+radius = 11.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1hpng"]
+radius = 13.0
+
+[node name="RigidBody2D" type="RigidBody2D"]
+mass = 1100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+texture = ExtResource("1_hbl8w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_38gij")
+
+[node name="ZonaMuerte" parent="." instance=ExtResource("2_xlsou")]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaMuerte"]
+shape = SubResource("CircleShape2D_1hpng")

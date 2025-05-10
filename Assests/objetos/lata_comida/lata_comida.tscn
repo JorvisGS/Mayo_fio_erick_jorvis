@@ -7,9 +7,12 @@
 size = Vector2(9.5, 15)
 
 [node name="lata_comida" type="Area2D"]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_k4t6e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
 position = Vector2(4.76837e-07, -1)
 scale = Vector2(0.553503, 0.584753)
 texture = ExtResource("1_3gk6g")

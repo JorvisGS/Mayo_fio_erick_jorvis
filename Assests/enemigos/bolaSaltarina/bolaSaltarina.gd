@@ -1,11 +1,11 @@
 extends RigidBody2D
-
 @onready var raycast = $RayCast2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	apply_impulse(Vector2(20, -30))
-
-
+	apply_central_impulse(Vector2(5, 0))  # Movimiento horizontal suave, sin salto
+	material.bounce = 0
+	material.friction = 1
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if raycast.is_colliding():

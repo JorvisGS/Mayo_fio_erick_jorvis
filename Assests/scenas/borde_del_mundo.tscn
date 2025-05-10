@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5xesgsbxx0fp"]
+
+[ext_resource type="PackedScene" uid="uid://bgtmb42f6nbij" path="res://Assests/scenas/zona_muerte.tscn" id="1_k7c2o"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bhfws"]
+
+[node name="borde del mundo" type="Node2D"]
+
+[node name="ZonaMuerte" parent="." instance=ExtResource("1_k7c2o")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ZonaMuerte"]
+shape = SubResource("WorldBoundaryShape2D_bhfws")

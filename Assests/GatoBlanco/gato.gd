@@ -13,6 +13,7 @@ var atacando = false
 @onready var maquinaEstados:AnimationTree = $AnimationTree
 @onready var sprite:Sprite2D = $Sprite2D
 @onready var attack_area =$area_atck
+@onready var atck_collision_shape_2d: CollisionShape2D = $area_atck/AtckCollisionShape2D
 
 func quieto(actiado:bool):
 	maquinaEstados["parameters/conditions/quieto"] = actiado
@@ -64,7 +65,9 @@ func _process(delta: float) -> void:
 	if direccion == 1:
 		caminando(true)
 		sprite["flip_h"] = false
+		atck_collision_shape_2d.position.x = 13
 	elif direccion == -1:
+		atck_collision_shape_2d.position.x = -13
 		caminando(true)
 		sprite["flip_h"] = true
 	else:

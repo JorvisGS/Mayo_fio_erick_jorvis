@@ -48,3 +48,7 @@ func _on_lata_comida_comida() -> void:
 func update_puntuacion():
 	puntuacion+=1
 	print(puntuacion)
+
+
+func _on_lata_comida_2_comida() -> void:
+	pass # Replace with function body.

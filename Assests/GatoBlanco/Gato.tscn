@@ -119,16 +119,22 @@ graph_offset = Vector2(-122, -56)
 size = Vector2(22.75, 11.5)
 
 [node name="gato" type="CharacterBody2D" groups=["jugador"]]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_bsw44")
 gravedad = 400
 salto = 160
 velocidad = 150
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+light_mask = 2
+visibility_layer = 2
 position = Vector2(1, 9.5)
 shape = SubResource("CircleShape2D_4hhsn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
 position = Vector2(0, 0.25)
 scale = Vector2(1, 1.01613)
 texture = ExtResource("2_0e4gw")
@@ -150,9 +156,10 @@ parameters/conditions/cayendo = false
 parameters/conditions/quieto = false
 
 [node name="area_atck" type="Area2D" parent="." groups=["jugador"]]
+visible = false
 
 [node name="AtckCollisionShape2D" type="CollisionShape2D" parent="area_atck"]
-position = Vector2(12.625, 9.75)
+position = Vector2(-13, 10)
 shape = SubResource("RectangleShape2D_wj1tt")
 
 [connection signal="area_entered" from="area_atck" to="." method="_on_area_atck_area_entered"]

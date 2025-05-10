@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://croelmh11yskp"
-path="res://.godot/imported/Spiked Ball.png-86be3cadc6e73a355cfbf1afa794fdb2.ctex"
+uid="uid://c18enr8jrghph"
+path="res://.godot/imported/Plataforma.png-e8d0bb9842042f0620ef0eb5e0f3c928.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assests/enemigos/bolas/Spiked Ball.png"
-dest_files=["res://.godot/imported/Spiked Ball.png-86be3cadc6e73a355cfbf1afa794fdb2.ctex"]
+source_file="res://Assests/objetos/plataforma/Plataforma.png"
+dest_files=["res://.godot/imported/Plataforma.png-e8d0bb9842042f0620ef0eb5e0f3c928.ctex"]
 
 [params]
 

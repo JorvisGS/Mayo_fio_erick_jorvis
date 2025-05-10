@@ -3,7 +3,7 @@ extends Area2D
 var float_amplitude := 2.0
 var float_speed := 2.0
 var original_y := 0.0
-var flotando := true  # <- Nueva variable de control
+var flotando := true  
 
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 signal comida

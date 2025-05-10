@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://0lq3ywraog88"]
 
 [ext_resource type="PackedScene" uid="uid://dad3gyq7o4s6e" path="res://Assests/GatoBlanco/Gato.tscn" id="2_78jwu"]
-[ext_resource type="TileSet" uid="uid://d0yp4p5yg81jv" path="res://Assests/Terreno/normal/normal.tres" id="2_voiou"]
+[ext_resource type="TileSet" uid="uid://d0yp4p5yg81jv" path="res://Assests/Terreno/terreno/normal.tres" id="2_voiou"]
 [ext_resource type="PackedScene" uid="uid://cquxox3bwajai" path="res://Assests/enemigos/Slime/Slime_2d.tscn" id="3_5lg8y"]
 [ext_resource type="PackedScene" uid="uid://dibh14f0arncu" path="res://Assests/interfaz/personaje/gui_gato.tscn" id="5_1d388"]
 [ext_resource type="PackedScene" uid="uid://cbc4hx7etsgip" path="res://Assests/objetos/monedas/moneda.tscn" id="5_jtmfv"]
@@ -19,7 +19,6 @@ tile_set = ExtResource("2_voiou")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_78jwu")]
 position = Vector2(150, 66)
-collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0, 6)
@@ -29,13 +28,13 @@ limit_bottom = 200
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="slime" parent="." instance=ExtResource("3_5lg8y")]
+[node name="monedas2" type="Node2D" parent="."]
+
+[node name="slime" parent="monedas2" instance=ExtResource("3_5lg8y")]
 light_mask = 4
 visibility_layer = 2
 position = Vector2(342, 109)
 scale = Vector2(1.21468, 1.12031)
-
-[node name="monedas2" type="Node2D" parent="."]
 
 [node name="moneda" parent="monedas2" instance=ExtResource("5_jtmfv")]
 position = Vector2(295, 74)
