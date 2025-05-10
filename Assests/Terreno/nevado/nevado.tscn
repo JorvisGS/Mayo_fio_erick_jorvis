@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://dq20x75s6osvt"]
+
+[ext_resource type="Texture2D" uid="uid://dhpbr51y0xp8a" path="res://Assests/Terreno/nevado/sky.png" id="1_gu88s"]
+[ext_resource type="Texture2D" uid="uid://qw8gmxd7yrth" path="res://Assests/Terreno/nevado/clouds_bg.png" id="2_3pqh4"]
+[ext_resource type="Texture2D" uid="uid://cuivyrnvwk7i" path="res://Assests/Terreno/nevado/glacial_mountains.png" id="3_fw16y"]
+[ext_resource type="Texture2D" uid="uid://dnfiat4xysvfd" path="res://Assests/Terreno/nevado/clouds_mg_2.png" id="4_0n4jy"]
+[ext_resource type="Texture2D" uid="uid://t0w2a5npnrrm" path="res://Assests/Terreno/nevado/clouds_mg_1.png" id="5_splph"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2(385, 219)
+motion_mirroring = Vector2(765.815, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_gu88s")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+position = Vector2(385, 219)
+motion_mirroring = Vector2(765.815, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
+scale = Vector2(2, 2)
+texture = ExtResource("2_3pqh4")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+position = Vector2(385, 219)
+motion_mirroring = Vector2(765.815, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+scale = Vector2(2, 2)
+texture = ExtResource("3_fw16y")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+position = Vector2(385, 219)
+motion_mirroring = Vector2(765.815, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+scale = Vector2(2, 2)
+texture = ExtResource("4_0n4jy")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+position = Vector2(385, 219)
+motion_mirroring = Vector2(765.815, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+scale = Vector2(2, 2)
+texture = ExtResource("5_splph")
