@@ -6,6 +6,8 @@ extends CharacterBody2D
 @onready var derecha: RayCast2D = $derecha
 @onready var izquierda: RayCast2D = $izquierda
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var izquierda_abajo: RayCast2D = $izquierdaAbajo
+@onready var derecha_abajo: RayCast2D = $derechaAbajo
 
 var target: Node = null
 var velocidad: float = 20
@@ -30,13 +32,14 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		return
 
+
+	if not abajo.is_colliding():
+		velocity.y += gravedad * delta
+	else:
+		velocity.y = 0
 	# Si no está lanzado, comportamiento normal
 	if not lanzado:
-		# Gravedad
-		if not abajo.is_colliding():
-			velocity.y += gravedad * delta
-		else:
-			velocity.y = 0
+
 
 		# Cambiar dirección
 		if derecha.is_colliding():

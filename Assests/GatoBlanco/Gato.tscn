@@ -128,8 +128,8 @@ velocidad = 150
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-light_mask = 2
-visibility_layer = 2
+light_mask = 3
+visibility_layer = 3
 position = Vector2(1, 9.5)
 shape = SubResource("CircleShape2D_4hhsn")
 

@@ -1,7 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://iyuwttgoqfrh"]
+[gd_scene load_steps=8 format=3 uid="uid://iyuwttgoqfrh"]
 
 [ext_resource type="Texture2D" uid="uid://450ccq8u1oye" path="res://Assests/enemigos/pinchos/pinchos.png" id="1_cturt"]
 [ext_resource type="PackedScene" uid="uid://bgtmb42f6nbij" path="res://Assests/scenas/zona_muerte.tscn" id="2_m2xx3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hb0bw"]
+size = Vector2(28, 4)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ir6gp"]
 atlas = ExtResource("1_cturt")
@@ -30,14 +33,24 @@ size = Vector2(32, 6)
 
 [node name="Node2D" type="Node2D"]
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-6, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(6, 10)
+shape = SubResource("RectangleShape2D_hb0bw")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1tkst")
 autoplay = "default"
 frame = 1
 frame_progress = 0.740602
+metadata/_edit_lock_ = true
 
 [node name="ZonaMuerte" parent="." instance=ExtResource("2_m2xx3")]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaMuerte"]
+visible = false
 position = Vector2(0, 13)
 shape = SubResource("RectangleShape2D_ssb74")

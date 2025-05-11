@@ -1,83 +1,18 @@
-[gd_scene load_steps=16 format=4 uid="uid://duayedsgfaqva"]
+[gd_scene load_steps=14 format=4 uid="uid://duayedsgfaqva"]
 
 [ext_resource type="PackedScene" uid="uid://dibh14f0arncu" path="res://Assests/interfaz/personaje/gui_gato.tscn" id="1_bmqxg"]
 [ext_resource type="PackedScene" uid="uid://dad3gyq7o4s6e" path="res://Assests/GatoBlanco/Gato.tscn" id="2_mg7c7"]
 [ext_resource type="TileSet" uid="uid://d0yp4p5yg81jv" path="res://Assests/Terreno/terreno/normal.tres" id="3_88m7u"]
 [ext_resource type="PackedScene" uid="uid://ctisjphhyvo34" path="res://Assests/Terreno/fondos/nubesDia/fondo1.tscn" id="4_acwkt"]
+[ext_resource type="TileSet" uid="uid://b48ss1coxe2v" path="res://Assests/Terreno/fondos/interiores.tres" id="4_croci"]
 [ext_resource type="PackedScene" uid="uid://cbc4hx7etsgip" path="res://Assests/objetos/monedas/moneda.tscn" id="5_iy35t"]
-[ext_resource type="Texture2D" uid="uid://bx4kn0msbdu54" path="res://Assests/Terreno/fondos/fondos.png" id="5_o2pm2"]
 [ext_resource type="PackedScene" uid="uid://byshcv7moll0n" path="res://Assests/objetos/plataforma/plataforma_2d.tscn" id="6_bfyqq"]
 [ext_resource type="PackedScene" uid="uid://b5xesgsbxx0fp" path="res://Assests/scenas/borde_del_mundo.tscn" id="6_nogaw"]
 [ext_resource type="PackedScene" uid="uid://cquxox3bwajai" path="res://Assests/enemigos/Slime/Slime_2d.tscn" id="6_y1vgx"]
-[ext_resource type="PackedScene" uid="uid://cw4e5u81ib2br" path="res://Assests/objetos/spawner.tscn" id="9_jbqhl"]
+[ext_resource type="PackedScene" uid="uid://cw4e5u81ib2br" path="res://Assests/objetos/spawn/spawner.tscn" id="9_jbqhl"]
 [ext_resource type="PackedScene" uid="uid://dcmk7a0yat6ca" path="res://Assests/enemigos/BolaPinchos/bolaPinchos.tscn" id="9_mcqcl"]
 [ext_resource type="PackedScene" uid="uid://crj5gi0b8u3ci" path="res://Assests/objetos/lata_comida/lata_comida.tscn" id="9_tohq8"]
 [ext_resource type="PackedScene" uid="uid://iyuwttgoqfrh" path="res://Assests/enemigos/pinchos/pinchos.tscn" id="10_mx0vf"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0w2xp"]
-texture = ExtResource("5_o2pm2")
-4:0/0 = 0
-4:0/0/terrain_set = 0
-4:0/0/terrain = 0
-4:0/0/terrains_peering_bit/right_side = 0
-4:0/0/terrains_peering_bit/bottom_right_corner = 0
-4:0/0/terrains_peering_bit/bottom_side = 0
-4:0/0/terrains_peering_bit/top_side = 0
-4:0/0/terrains_peering_bit/top_right_corner = 0
-5:0/0 = 0
-5:0/0/terrain_set = 0
-5:0/0/terrain = 0
-5:0/0/terrains_peering_bit/bottom_side = 0
-5:0/0/terrains_peering_bit/bottom_left_corner = 0
-5:0/0/terrains_peering_bit/left_side = 0
-5:0/0/terrains_peering_bit/top_left_corner = 0
-5:0/0/terrains_peering_bit/top_side = 0
-7:0/0 = 0
-7:0/0/terrain_set = 0
-7:0/0/terrain = 0
-7:0/0/terrains_peering_bit/right_side = 0
-7:0/0/terrains_peering_bit/bottom_right_corner = 0
-7:0/0/terrains_peering_bit/bottom_side = 0
-7:0/0/terrains_peering_bit/bottom_left_corner = 0
-7:0/0/terrains_peering_bit/left_side = 0
-0:1/0 = 0
-2:1/0 = 0
-2:1/0/terrain_set = 0
-2:1/0/terrain = 0
-2:1/0/terrains_peering_bit/right_side = 0
-2:1/0/terrains_peering_bit/bottom_right_corner = 0
-2:1/0/terrains_peering_bit/bottom_side = 0
-2:1/0/terrains_peering_bit/bottom_left_corner = 0
-2:1/0/terrains_peering_bit/left_side = 0
-2:1/0/terrains_peering_bit/top_left_corner = 0
-2:1/0/terrains_peering_bit/top_side = 0
-2:1/0/terrains_peering_bit/top_right_corner = 0
-4:1/0 = 0
-4:1/0/terrain_set = 0
-4:1/0/terrain = 0
-4:1/0/terrains_peering_bit/right_side = 0
-4:1/0/terrains_peering_bit/top_side = 0
-4:1/0/terrains_peering_bit/top_right_corner = 0
-5:1/0 = 0
-5:1/0/terrain_set = 0
-5:1/0/terrain = 0
-5:1/0/terrains_peering_bit/left_side = 0
-5:1/0/terrains_peering_bit/top_left_corner = 0
-5:1/0/terrains_peering_bit/top_side = 0
-7:1/0 = 0
-7:1/0/terrain_set = 0
-7:1/0/terrain = 0
-7:1/0/terrains_peering_bit/right_side = 0
-7:1/0/terrains_peering_bit/left_side = 0
-7:1/0/terrains_peering_bit/top_left_corner = 0
-7:1/0/terrains_peering_bit/top_side = 0
-7:1/0/terrains_peering_bit/top_right_corner = 0
-
-[sub_resource type="TileSet" id="TileSet_0n4yi"]
-terrain_set_0/mode = 0
-terrain_set_0/terrain_0/name = "normal"
-terrain_set_0/terrain_0/color = Color(0.686748, 0.145434, 0.200967, 1)
-sources/0 = SubResource("TileSetAtlasSource_0w2xp")
 
 [node name="mundo1" type="Node2D"]
 position = Vector2(-4, -77)
@@ -105,7 +40,7 @@ tile_set = ExtResource("3_88m7u")
 
 [node name="interior" type="TileMapLayer" parent="mundo"]
 tile_map_data = PackedByteArray("AABgABYAAAAHAAAAAABhABYAAAAHAAAAAABhABcAAAACAAEAAABgABcAAAACAAEAAABfABcAAAAEAAAAAABfABYAAAAEAAAAAABfABgAAAAEAAEAAABgABgAAAAHAAEAAABhABgAAAAHAAEAAABiABgAAAAHAAEAAABjABgAAAAHAAEAAABkABgAAAAHAAEAAABlABgAAAAHAAEAAABmABgAAAAHAAEAAABnABgAAAAHAAEAAABoABgAAAAHAAEAAABpABgAAAAHAAEAAABqABgAAAAHAAEAAABrABgAAAAHAAEAAABsABgAAAAHAAEAAABtABgAAAAFAAEAAABtABcAAAACAAEAAABtABYAAAACAAEAAABtABUAAAACAAEAAABtABQAAAAFAAAAAABtABMAAAAFAAAAAABsABMAAAACAAEAAABrABMAAAACAAEAAABqABMAAAACAAEAAABpABMAAAACAAEAAABoABMAAAACAAEAAABnABMAAAACAAEAAABnABIAAAAEAAAAAABoABIAAAACAAEAAABpABIAAAACAAEAAABqABIAAAACAAEAAABrABIAAAACAAEAAABsABIAAAACAAEAAABtABIAAAAFAAAAAABpABQAAAACAAEAAABoABQAAAACAAEAAABnABQAAAACAAEAAABmABQAAAAEAAAAAABqABQAAAACAAEAAABrABQAAAACAAEAAABsABQAAAACAAEAAABsABUAAAACAAEAAABrABUAAAACAAEAAABqABUAAAACAAEAAABpABUAAAACAAEAAABoABUAAAACAAEAAABnABUAAAACAAEAAABmABUAAAAEAAAAAABmABMAAAAEAAAAAABkABYAAAAHAAAAAABjABYAAAAHAAAAAABiABYAAAAHAAAAAABiABcAAAACAAEAAABjABcAAAACAAEAAABkABcAAAACAAEAAABlABcAAAACAAEAAABmABcAAAACAAEAAABnABcAAAACAAEAAABoABcAAAACAAEAAABpABcAAAACAAEAAABqABcAAAACAAEAAABrABcAAAACAAEAAABsABcAAAACAAEAAABsABYAAAACAAEAAABrABYAAAACAAEAAABqABYAAAACAAEAAABpABYAAAACAAEAAABoABYAAAACAAEAAABnABYAAAACAAEAAABmABYAAAACAAEAAABlABYAAAAHAAAAAABuABcAAAAHAAEAAABvABcAAAAHAAEAAABwABcAAAAHAAEAAABxABcAAAAHAAEAAAByABcAAAAHAAEAAABzABcAAAAHAAEAAAB0ABcAAAAHAAEAAAB1ABcAAAAHAAEAAAB2ABcAAAAHAAEAAAB3ABcAAAAFAAEAAAB3ABYAAAACAAEAAAB3ABUAAAACAAEAAAB3ABQAAAACAAEAAAB3ABMAAAACAAEAAAB2ABMAAAAHAAAAAAB1ABMAAAAHAAAAAAB0ABMAAAAHAAAAAAB0ABQAAAAEAAAAAAB1ABQAAAACAAEAAAB2ABQAAAACAAEAAAB2ABUAAAACAAEAAAB1ABUAAAACAAEAAAB0ABUAAAACAAEAAABzABUAAAAHAAAAAAByABUAAAAHAAAAAABxABUAAAAHAAAAAABwABUAAAAHAAAAAABvABUAAAAHAAAAAABuABYAAAACAAEAAABuABUAAAAHAAAAAABvABYAAAACAAEAAABwABYAAAACAAEAAABxABYAAAACAAEAAAB0ABYAAAACAAEAAABzABYAAAACAAEAAAByABYAAAACAAEAAAB4ABMAAAAFAAAAAAB4ABQAAAAFAAAAAAB4ABUAAAAFAAAAAAB4ABYAAAAFAAEAAAB2ABYAAAACAAEAAAB1ABYAAAACAAEAAABQABcAAAAFAAAAAABQABgAAAAFAAEAAABPABgAAAAEAAEAAABPABcAAAAEAAAAAABGABkAAAAFAAEAAABFABkAAAAHAAEAAABEABkAAAAEAAEAAABEABgAAAAHAAAAAABFABgAAAAHAAAAAABGABgAAAAHAAAAAAAwABgAAAAEAAEAAAAwABcAAAAEAAAAAAAwABYAAAAEAAAAAAAxABYAAAACAAEAAAAyABYAAAACAAEAAAAzABYAAAACAAEAAAA0ABYAAAACAAEAAAA0ABcAAAACAAEAAAAzABcAAAACAAEAAAAyABcAAAACAAEAAAAxABcAAAACAAEAAAAxABgAAAAHAAEAAAAyABgAAAAHAAEAAAAzABgAAAAHAAEAAAA0ABgAAAAFAAEAAAA0ABUAAAAHAAAAAAAzABUAAAAHAAAAAAAyABUAAAAHAAAAAAAxABUAAAAHAAAAAAAwABUAAAAHAAAAAAA1ABYAAAAFAAAAAAA1ABUAAAAFAAAAAAA1ABcAAAAFAAEAAABQABYAAAAFAAAAAABPABYAAAAEAAAAAAC3ABoAAAAHAAEAAAC3ABkAAAAHAAAAAAC4ABkAAAACAAEAAAC2ABoAAAAEAAEAAAC4ABoAAAAHAAEAAAC5ABkAAAACAAEAAAC6ABkAAAAHAAEAAAC5ABoAAAAFAAEAAAC5ABgAAAAHAAAAAAC6ABgAAAACAAEAAAC7ABkAAAAFAAEAAAC7ABgAAAACAAEAAAC7ABcAAAAHAAAAAAC8ABcAAAAHAAAAAAC8ABgAAAAFAAEAAAC+ABgAAAAFAAEAAAC2ABkAAAAEAAAAAAC6ABcAAAAHAAAAAAC4ABgAAAAEAAAAAAA=")
-tile_set = SubResource("TileSet_0n4yi")
+tile_set = ExtResource("4_croci")
 
 [node name="ParallaxBackground" parent="mundo" instance=ExtResource("4_acwkt")]
 

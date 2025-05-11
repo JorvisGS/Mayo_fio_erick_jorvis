@@ -105,3 +105,8 @@ func _on_area_atck_area_entered(area: Area2D) -> void:
 		var enemigo = area.get_parent()
 		if enemigo.has_method("recibir_golpe"):
 			enemigo.recibir_golpe(1)
+
+
+func _on_moneda_32_collected() -> void:
+	
+	pass # Replace with function body.

@@ -52,3 +52,237 @@ func update_puntuacion():
 
 func _on_lata_comida_2_comida() -> void:
 	pass # Replace with function body.
+
+
+func _on_moneda_22_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_24_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_60_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_59_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_58_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_57_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_56_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_55_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_54_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_53_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_52_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_51_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_50_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_49_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_48_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_47_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_2_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_3_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_4_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_5_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_7_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_6_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_8_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_9_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_10_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_11_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_12_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_13_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_14_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_15_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_16_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_17_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_18_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_19_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_20_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_21_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_23_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_25_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_26_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_27_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_28_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_29_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_30_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_32_collected() -> void:
+	pass # Replace with function body.
+
+
+
+
+func _on_moneda_33_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_34_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_35_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_36_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_37_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_38_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_39_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_40_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_41_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_42_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_43_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_44_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_45_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_moneda_46_collected() -> void:
+	pass # Replace with function body.
