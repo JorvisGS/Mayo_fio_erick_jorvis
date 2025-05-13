@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bw427l7d37ffm"]
+
+[ext_resource type="PackedScene" uid="uid://bgtmb42f6nbij" path="res://Assests/scenas/zona_muerte.tscn" id="1_dom3r"]
+[ext_resource type="Script" path="res://Assests/enemigos/cangrejo/cangejo.tres.gd" id="1_w7356"]
+[ext_resource type="Texture2D" uid="uid://dy7p31ayg4m22" path="res://Assests/enemigos/cangrejo/Idle.png" id="2_gmjyi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q1x3d"]
+size = Vector2(30, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j12dl"]
+size = Vector2(21, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nn7f"]
+size = Vector2(22, 23)
+
+[node name="cangrejo" type="CharacterBody2D"]
+script = ExtResource("1_w7356")
+
+[node name="ZonaMuerte" parent="." instance=ExtResource("1_dom3r")]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaMuerte"]
+visible = false
+shape = SubResource("RectangleShape2D_q1x3d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -2)
+scale = Vector2(0.738095, 0.785714)
+texture = ExtResource("2_gmjyi")
+
+[node name="RayCastArriba" type="RayCast2D" parent="."]
+target_position = Vector2(0, -62)
+
+[node name="ZonaMuertePinzas" parent="RayCastArriba" instance=ExtResource("1_dom3r")]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RayCastArriba/ZonaMuertePinzas"]
+position = Vector2(-1.5, -24)
+shape = SubResource("RectangleShape2D_j12dl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2.5)
+shape = SubResource("RectangleShape2D_7nn7f")
