@@ -7,6 +7,7 @@
 script = ExtResource("1_fguu8")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_co21r")

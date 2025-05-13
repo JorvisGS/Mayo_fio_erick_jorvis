@@ -37,6 +37,7 @@ tangential_accel_curve = SubResource("CurveTexture_37wsx")
 
 [node name="slime" type="Node2D" parent="."]
 position = Vector2(3392, 326)
+metadata/_edit_lock_ = true
 
 [node name="slime" parent="slime" instance=ExtResource("12_qy24p")]
 
@@ -48,6 +49,7 @@ position = Vector2(-56, -1)
 
 [node name="gato" parent="." instance=ExtResource("1_siv1s")]
 position = Vector2(10, 314)
+metadata/_edit_lock_ = true
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="gato"]
 position = Vector2(128, -113)
@@ -91,6 +93,7 @@ position = Vector2(0, 483)
 position = Vector2(0, 524)
 
 [node name="pinguino" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="pinguino" parent="pinguino" instance=ExtResource("3_sys65")]
 position = Vector2(108, 360)
@@ -123,6 +126,7 @@ position = Vector2(3091, 360)
 position = Vector2(3496, 326)
 
 [node name="plataformas" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="CharacterBody2D" parent="plataformas" instance=ExtResource("7_qwquq")]
 position = Vector2(1805, 337)
@@ -180,6 +184,7 @@ speed = 30.0
 distance = 30.0
 
 [node name="pinchos" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="Node2D2" parent="pinchos" instance=ExtResource("8_cgvc4")]
 position = Vector2(1676, 320)
@@ -220,6 +225,7 @@ position = Vector2(2673, 320)
 position = Vector2(3032, 352)
 
 [node name="spawner bolasPinchos" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="spawner" parent="spawner bolasPinchos" instance=ExtResource("9_3nlhe")]
 position = Vector2(1855, 262)
@@ -238,6 +244,7 @@ position = Vector2(3722, 174)
 bola_escena = ExtResource("10_pusy1")
 
 [node name="monedas" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="moneda" parent="monedas" instance=ExtResource("11_kxx3g")]
 position = Vector2(1590, 317)
@@ -428,6 +435,7 @@ position = Vector2(4177, 296)
 position = Vector2(3576, 312)
 
 [node name="lata_comida2" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="lata_comida" parent="lata_comida2" instance=ExtResource("13_ihurq")]
 position = Vector2(2360, 324)
