@@ -8,3 +8,7 @@ func _ready():
 
 func go_to_game_scene():
 	get_tree().change_scene_to_file("res://Assests/menus/MenuLVL1-2/menuniveles.tscn")
+
+
+func _on_salir_pressed() -> void:
+	get_tree().quit()
