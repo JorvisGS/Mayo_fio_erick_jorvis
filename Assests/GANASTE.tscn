@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1h4j6h7ke0cc"]
+
+[ext_resource type="Script" path="res://Assests/menus/GANASTE_2d.gd" id="1_1x11r"]
+
+[node name="GANASTE" type="Area2D"]
+script = ExtResource("1_1x11r")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

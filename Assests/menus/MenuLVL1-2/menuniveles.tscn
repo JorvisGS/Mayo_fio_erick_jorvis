@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://n5usmog7onlc"]
+[gd_scene load_steps=4 format=3 uid="uid://n5usmog7onlc"]
 
 [ext_resource type="Texture2D" uid="uid://dl65f8htexxk5" path="res://Assests/menus/MenuPrincipal/Imagenes/image0.png" id="1_21nk2"]
 [ext_resource type="Script" path="res://Assests/menus/MenuLVL1-2/scripts.gd" id="1_eeg2b"]
+[ext_resource type="FontFile" uid="uid://mf1opp6a403y" path="res://Assests/fuentes/Daydream.ttf" id="3_kyvuj"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -47,15 +48,18 @@ grow_vertical = 2
 
 [node name="Nivel1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_kyvuj")
 theme_override_font_sizes/font_size = 50
 text = "NIVEL 1"
 
 [node name="Nivel2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_kyvuj")
 theme_override_font_sizes/font_size = 50
 text = "NIVEL 2"
 
 [node name="Nivel3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_kyvuj")
 theme_override_font_sizes/font_size = 50
 text = "NIVEL 3"

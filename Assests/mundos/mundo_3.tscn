@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://glthnfd6l2d4"]
+[gd_scene load_steps=19 format=4 uid="uid://glthnfd6l2d4"]
 
 [ext_resource type="PackedScene" uid="uid://76bb6uphwwud" path="res://Assests/Terreno/tropical/tropical_fondo.tscn" id="1_8xi6m"]
 [ext_resource type="PackedScene" uid="uid://dk2a2qsm323w8" path="res://Assests/enemigos/pinguino/pinguino.tscn" id="1_44wt0"]
@@ -16,6 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://byshcv7moll0n" path="res://Assests/objetos/plataforma/plataforma_2d.tscn" id="11_kebjt"]
 [ext_resource type="PackedScene" uid="uid://cgg3ca58k6164" path="res://Assests/enemigos/bolaSaltarina/bolaSaltarina.tscn" id="14_wj6hx"]
 [ext_resource type="PackedScene" uid="uid://b5xesgsbxx0fp" path="res://Assests/scenas/borde_del_mundo.tscn" id="15_yndkk"]
+[ext_resource type="PackedScene" uid="uid://b1h4j6h7ke0cc" path="res://Assests/GANASTE.tscn" id="17_rxf6e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o8cn5"]
+size = Vector2(700, 230.5)
 
 [node name="mundo_3" type="Node2D"]
 
@@ -25,8 +29,7 @@
 
 [node name="gato" parent="." instance=ExtResource("1_86ulf")]
 z_index = 8
-position = Vector2(118, 446)
-metadata/_edit_lock_ = true
+position = Vector2(161, 448)
 
 [node name="Camera2D" type="Camera2D" parent="gato"]
 visible = false
@@ -606,6 +609,12 @@ position = Vector2(0, -505)
 
 [node name="borde del mundo3" parent="borde del mundo2" instance=ExtResource("15_yndkk")]
 position = Vector2(0, -465)
+
+[node name="GANASTE" parent="." instance=ExtResource("17_rxf6e")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GANASTE"]
+position = Vector2(4671, 80.25)
+shape = SubResource("RectangleShape2D_o8cn5")
 
 [connection signal="collected" from="monedas/moneda" to="CanvasLayer" method="_on_moneda_collected"]
 [connection signal="collected" from="monedas/moneda63" to="CanvasLayer" method="_on_moneda_collected"]

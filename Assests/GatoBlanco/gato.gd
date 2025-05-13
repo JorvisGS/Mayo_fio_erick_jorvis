@@ -110,3 +110,7 @@ func _on_area_atck_area_entered(area: Area2D) -> void:
 func _on_moneda_32_collected() -> void:
 	
 	pass # Replace with function body.
+
+
+func _on_ganaste_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.

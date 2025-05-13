@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cyttie4ls71hm"]
+[gd_scene load_steps=21 format=4 uid="uid://cyttie4ls71hm"]
 
 [ext_resource type="PackedScene" uid="uid://dibh14f0arncu" path="res://Assests/interfaz/personaje/gui_gato.tscn" id="1_8qvax"]
 [ext_resource type="PackedScene" uid="uid://dq20x75s6osvt" path="res://Assests/Terreno/nevado/nevado.tscn" id="1_dxxbr"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cquxox3bwajai" path="res://Assests/enemigos/Slime/Slime_2d.tscn" id="12_qy24p"]
 [ext_resource type="PackedScene" uid="uid://crj5gi0b8u3ci" path="res://Assests/objetos/lata_comida/lata_comida.tscn" id="13_ihurq"]
 [ext_resource type="PackedScene" uid="uid://jvwsnehagpqg" path="res://Assests/menus/MenuPausa/pausa.tscn" id="15_vsfrc"]
+[ext_resource type="PackedScene" uid="uid://b1h4j6h7ke0cc" path="res://Assests/GANASTE.tscn" id="16_gq7n2"]
 
 [sub_resource type="Curve" id="Curve_ro8xd"]
 min_value = -200.0
@@ -33,6 +34,9 @@ gravity = Vector3(-50, 100.075, 0)
 tangential_accel_min = -2.23517e-06
 tangential_accel_max = 19.72
 tangential_accel_curve = SubResource("CurveTexture_37wsx")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rm6vj"]
+size = Vector2(774, 197)
 
 [node name="mundo2" type="Node2D"]
 
@@ -451,6 +455,12 @@ position = Vector2(735, 356)
 
 [node name="lata_comida4" parent="lata_comida2" instance=ExtResource("13_ihurq")]
 position = Vector2(1631, 321)
+
+[node name="GANASTE" parent="." instance=ExtResource("16_gq7n2")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GANASTE"]
+position = Vector2(4688, 287.5)
+shape = SubResource("RectangleShape2D_rm6vj")
 
 [connection signal="collected" from="monedas/moneda" to="CanvasLayer" method="_on_moneda_collected"]
 [connection signal="collected" from="monedas/moneda3" to="CanvasLayer" method="_on_moneda_collected"]

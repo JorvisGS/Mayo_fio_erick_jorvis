@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2a7rduw6sxuw"]
+[gd_scene load_steps=4 format=3 uid="uid://d2a7rduw6sxuw"]
 
 [ext_resource type="Script" path="res://Assests/menus/MenuPrincipal/scripts.gd" id="1_yjarw"]
 [ext_resource type="Texture2D" uid="uid://dl65f8htexxk5" path="res://Assests/menus/MenuPrincipal/Imagenes/image0.png" id="2_qljjs"]
+[ext_resource type="FontFile" uid="uid://mf1opp6a403y" path="res://Assests/fuentes/Daydream.ttf" id="3_3dc15"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -47,11 +48,13 @@ grow_vertical = 2
 
 [node name="Jugar" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3dc15")
 theme_override_font_sizes/font_size = 50
 text = "JUGAR"
 
 [node name="Salir" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3dc15")
 theme_override_font_sizes/font_size = 50
 text = "SALIR"
 

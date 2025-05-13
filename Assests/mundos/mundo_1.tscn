@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://duayedsgfaqva"]
+[gd_scene load_steps=17 format=4 uid="uid://duayedsgfaqva"]
 
 [ext_resource type="PackedScene" uid="uid://dibh14f0arncu" path="res://Assests/interfaz/personaje/gui_gato.tscn" id="1_bmqxg"]
 [ext_resource type="PackedScene" uid="uid://dad3gyq7o4s6e" path="res://Assests/GatoBlanco/Gato.tscn" id="2_mg7c7"]
@@ -14,6 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://crj5gi0b8u3ci" path="res://Assests/objetos/lata_comida/lata_comida.tscn" id="9_tohq8"]
 [ext_resource type="PackedScene" uid="uid://iyuwttgoqfrh" path="res://Assests/enemigos/pinchos/pinchos.tscn" id="10_mx0vf"]
 [ext_resource type="PackedScene" uid="uid://jvwsnehagpqg" path="res://Assests/menus/MenuPausa/pausa.tscn" id="14_bmsbc"]
+[ext_resource type="PackedScene" uid="uid://b1h4j6h7ke0cc" path="res://Assests/GANASTE.tscn" id="15_pk70f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3ow5"]
+size = Vector2(824.5, 233)
 
 [node name="mundo1" type="Node2D"]
 position = Vector2(-4, -77)
@@ -339,6 +343,12 @@ speed = 20.0
 position = Vector2(2211, 300)
 speed = 20.0
 distance = 50.0
+
+[node name="GANASTE" parent="." instance=ExtResource("15_pk70f")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GANASTE"]
+position = Vector2(3538.25, 237.5)
+shape = SubResource("RectangleShape2D_d3ow5")
 
 [connection signal="collected" from="monedas/moneda" to="CanvasLayer" method="_on_moneda_collected"]
 [connection signal="collected" from="monedas/moneda2" to="CanvasLayer" method="_on_moneda_collected"]
