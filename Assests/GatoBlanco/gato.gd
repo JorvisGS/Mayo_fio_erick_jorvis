@@ -85,7 +85,7 @@ func morir():
 
 func recibir_golpe():
 	animation_player.play("daño")
-	var jump_force = -100
+	var jump_force = -150
 	velocity.x = 0
 	velocity.y = jump_force
 	puede_moverse = false

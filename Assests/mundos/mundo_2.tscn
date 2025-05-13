@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://cyttie4ls71hm"]
+[gd_scene load_steps=22 format=4 uid="uid://cyttie4ls71hm"]
 
 [ext_resource type="PackedScene" uid="uid://dibh14f0arncu" path="res://Assests/interfaz/personaje/gui_gato.tscn" id="1_8qvax"]
 [ext_resource type="PackedScene" uid="uid://dq20x75s6osvt" path="res://Assests/Terreno/nevado/nevado.tscn" id="1_dxxbr"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cquxox3bwajai" path="res://Assests/enemigos/Slime/Slime_2d.tscn" id="12_qy24p"]
 [ext_resource type="PackedScene" uid="uid://crj5gi0b8u3ci" path="res://Assests/objetos/lata_comida/lata_comida.tscn" id="13_ihurq"]
 [ext_resource type="PackedScene" uid="uid://jvwsnehagpqg" path="res://Assests/menus/MenuPausa/pausa.tscn" id="15_vsfrc"]
+[ext_resource type="AudioStream" uid="uid://d2erdeumvn3lc" path="res://Assests/musica/Cookierun Ovenbreak OST [Wish Festival] theme song. - RockGiKunG.mp3" id="16_017f7"]
 [ext_resource type="PackedScene" uid="uid://b1h4j6h7ke0cc" path="res://Assests/GANASTE.tscn" id="16_gq7n2"]
 
 [sub_resource type="Curve" id="Curve_ro8xd"]
@@ -163,12 +164,6 @@ distance = 40.0
 position = Vector2(3875, 336)
 speed = 30.0
 distance = 30.0
-
-[node name="CharacterBody2D6" parent="plataformas" instance=ExtResource("7_qwquq")]
-visible = false
-position = Vector2(4067, 321)
-speed = 30.0
-distance = 40.0
 
 [node name="CharacterBody2D7" parent="plataformas" instance=ExtResource("7_qwquq")]
 position = Vector2(4177, 321)
@@ -455,6 +450,11 @@ position = Vector2(735, 356)
 
 [node name="lata_comida4" parent="lata_comida2" instance=ExtResource("13_ihurq")]
 position = Vector2(1631, 321)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_017f7")
+pitch_scale = 0.9
+autoplay = true
 
 [node name="GANASTE" parent="." instance=ExtResource("16_gq7n2")]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://glthnfd6l2d4"]
+[gd_scene load_steps=20 format=4 uid="uid://glthnfd6l2d4"]
 
 [ext_resource type="PackedScene" uid="uid://76bb6uphwwud" path="res://Assests/Terreno/tropical/tropical_fondo.tscn" id="1_8xi6m"]
 [ext_resource type="PackedScene" uid="uid://dk2a2qsm323w8" path="res://Assests/enemigos/pinguino/pinguino.tscn" id="1_44wt0"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cgg3ca58k6164" path="res://Assests/enemigos/bolaSaltarina/bolaSaltarina.tscn" id="14_wj6hx"]
 [ext_resource type="PackedScene" uid="uid://b5xesgsbxx0fp" path="res://Assests/scenas/borde_del_mundo.tscn" id="15_yndkk"]
 [ext_resource type="PackedScene" uid="uid://b1h4j6h7ke0cc" path="res://Assests/GANASTE.tscn" id="17_rxf6e"]
+[ext_resource type="AudioStream" uid="uid://bcsfc14u4q7c" path="res://Assests/musica/Cookie Run_ Oven Break OST [Breakout Main Episode Stage 1 Theme] 跑跑薑餅人：烤箱大逃亡【逃出團主要區域Stage 1主題曲】 [EyjfjxOMwy8].mp3" id="18_bep4x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8cn5"]
 size = Vector2(700, 230.5)
@@ -615,6 +616,10 @@ position = Vector2(0, -465)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GANASTE"]
 position = Vector2(4671, 80.25)
 shape = SubResource("RectangleShape2D_o8cn5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_bep4x")
+autoplay = true
 
 [connection signal="collected" from="monedas/moneda" to="CanvasLayer" method="_on_moneda_collected"]
 [connection signal="collected" from="monedas/moneda63" to="CanvasLayer" method="_on_moneda_collected"]

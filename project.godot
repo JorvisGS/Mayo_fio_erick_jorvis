@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="7vidas"
-run/main_scene="res://Assests/GatoBlanco/Gato.tscn"
+run/main_scene="res://Assests/menus/MenuPrincipal/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
 [display]
