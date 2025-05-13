@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://5otrq5gxf1m1"
+path="res://.godot/imported/Cookie Run Oven Break OST [Fragrant Lotus Paradise Lobby Theme] 跑跑薑餅人：烤箱大逃亡【幽香水蓮花樂園大廳主題曲】 - Cookie Run Music.mp3-27df6d201475d40dd92f8d71901db906.mp3str"
+
+[deps]
+
+source_file="res://Assests/musica/Cookie Run Oven Break OST [Fragrant Lotus Paradise Lobby Theme] 跑跑薑餅人：烤箱大逃亡【幽香水蓮花樂園大廳主題曲】 - Cookie Run Music.mp3"
+dest_files=["res://.godot/imported/Cookie Run Oven Break OST [Fragrant Lotus Paradise Lobby Theme] 跑跑薑餅人：烤箱大逃亡【幽香水蓮花樂園大廳主題曲】 - Cookie Run Music.mp3-27df6d201475d40dd92f8d71901db906.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

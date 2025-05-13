@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bcsfc14u4q7c"
+path="res://.godot/imported/Cookie Run_ Oven Break OST [Breakout Main Episode Stage 1 Theme] 跑跑薑餅人：烤箱大逃亡【逃出團主要區域Stage 1主題曲】 [EyjfjxOMwy8].mp3-0b85106c01addc425d1c24fc54e873a3.mp3str"
+
+[deps]
+
+source_file="res://Assests/musica/Cookie Run_ Oven Break OST [Breakout Main Episode Stage 1 Theme] 跑跑薑餅人：烤箱大逃亡【逃出團主要區域Stage 1主題曲】 [EyjfjxOMwy8].mp3"
+dest_files=["res://.godot/imported/Cookie Run_ Oven Break OST [Breakout Main Episode Stage 1 Theme] 跑跑薑餅人：烤箱大逃亡【逃出團主要區域Stage 1主題曲】 [EyjfjxOMwy8].mp3-0b85106c01addc425d1c24fc54e873a3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
