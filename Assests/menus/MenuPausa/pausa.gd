@@ -23,8 +23,12 @@ func _physics_process(delta: float) -> void:
 
 func go_to_main_menu():
 	get_tree().paused = false
-	get_tree().change_scene("res://Assests/menus/MenuPrincipal/menu.tscn")
+	get_tree().change_scene_to_file("res://Assests/menus/MenuPrincipal/menu.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_salir_pressed() -> void:
+	go_to_main_menu()

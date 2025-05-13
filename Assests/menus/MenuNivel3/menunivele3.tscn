@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dohb5lcd56fdq"]
+[gd_scene load_steps=4 format=3 uid="uid://dohb5lcd56fdq"]
 
 [ext_resource type="Texture2D" uid="uid://d1ap74f1khcmn" path="res://Assests/menus/MenuNivel3/Imagenes/playa.png" id="1_dc2ih"]
+[ext_resource type="Script" path="res://Assests/menus/MenuNivel3/scripts.gd" id="1_tk5p2"]
 [ext_resource type="FontFile" uid="uid://mf1opp6a403y" path="res://Assests/fuentes/Daydream.ttf" id="2_6k4kj"]
 
 [node name="Menu" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tk5p2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=17 format=4 uid="uid://cyttie4ls71hm"]
-=======
-[gd_scene load_steps=18 format=4 uid="uid://cyttie4ls71hm"]
->>>>>>> 01d36f18efdaf891d475c7b1b60f020e24f1b77e
+[gd_scene load_steps=19 format=4 uid="uid://cyttie4ls71hm"]
 
 [ext_resource type="PackedScene" uid="uid://dibh14f0arncu" path="res://Assests/interfaz/personaje/gui_gato.tscn" id="1_8qvax"]
 [ext_resource type="PackedScene" uid="uid://dq20x75s6osvt" path="res://Assests/Terreno/nevado/nevado.tscn" id="1_dxxbr"]
@@ -17,11 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://dcmk7a0yat6ca" path="res://Assests/enemigos/BolaPinchos/bolaPinchos.tscn" id="10_pusy1"]
 [ext_resource type="PackedScene" uid="uid://cbc4hx7etsgip" path="res://Assests/objetos/monedas/moneda.tscn" id="11_kxx3g"]
 [ext_resource type="PackedScene" uid="uid://cquxox3bwajai" path="res://Assests/enemigos/Slime/Slime_2d.tscn" id="12_qy24p"]
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://jvwsnehagpqg" path="res://Assests/menus/MenuPausa/pausa.tscn" id="13_83uka"]
-=======
 [ext_resource type="PackedScene" uid="uid://crj5gi0b8u3ci" path="res://Assests/objetos/lata_comida/lata_comida.tscn" id="13_ihurq"]
->>>>>>> 01d36f18efdaf891d475c7b1b60f020e24f1b77e
+[ext_resource type="PackedScene" uid="uid://jvwsnehagpqg" path="res://Assests/menus/MenuPausa/pausa.tscn" id="15_vsfrc"]
 
 [sub_resource type="Curve" id="Curve_ro8xd"]
 min_value = -200.0
@@ -42,6 +35,8 @@ tangential_accel_max = 19.72
 tangential_accel_curve = SubResource("CurveTexture_37wsx")
 
 [node name="mundo2" type="Node2D"]
+
+[node name="Pausa" parent="." instance=ExtResource("15_vsfrc")]
 
 [node name="slime" type="Node2D" parent="."]
 position = Vector2(3392, 326)
@@ -442,9 +437,6 @@ position = Vector2(4177, 296)
 [node name="moneda39" parent="monedas" instance=ExtResource("11_kxx3g")]
 position = Vector2(3576, 312)
 
-<<<<<<< HEAD
-[node name="Pausa" parent="." instance=ExtResource("13_83uka")]
-=======
 [node name="lata_comida2" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
 
@@ -459,7 +451,6 @@ position = Vector2(735, 356)
 
 [node name="lata_comida4" parent="lata_comida2" instance=ExtResource("13_ihurq")]
 position = Vector2(1631, 321)
->>>>>>> 01d36f18efdaf891d475c7b1b60f020e24f1b77e
 
 [connection signal="collected" from="monedas/moneda" to="CanvasLayer" method="_on_moneda_collected"]
 [connection signal="collected" from="monedas/moneda3" to="CanvasLayer" method="_on_moneda_collected"]

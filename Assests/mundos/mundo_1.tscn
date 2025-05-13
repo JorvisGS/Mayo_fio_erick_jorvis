@@ -13,10 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://dcmk7a0yat6ca" path="res://Assests/enemigos/BolaPinchos/bolaPinchos.tscn" id="9_mcqcl"]
 [ext_resource type="PackedScene" uid="uid://crj5gi0b8u3ci" path="res://Assests/objetos/lata_comida/lata_comida.tscn" id="9_tohq8"]
 [ext_resource type="PackedScene" uid="uid://iyuwttgoqfrh" path="res://Assests/enemigos/pinchos/pinchos.tscn" id="10_mx0vf"]
-[ext_resource type="PackedScene" uid="uid://jvwsnehagpqg" path="res://Assests/menus/MenuPausa/pausa.tscn" id="14_8alr7"]
+[ext_resource type="PackedScene" uid="uid://jvwsnehagpqg" path="res://Assests/menus/MenuPausa/pausa.tscn" id="14_bmsbc"]
 
 [node name="mundo1" type="Node2D"]
 position = Vector2(-4, -77)
+
+[node name="Pausa" parent="." instance=ExtResource("14_bmsbc")]
 
 [node name="CanvasLayer" parent="." instance=ExtResource("1_bmqxg")]
 
@@ -337,8 +339,6 @@ speed = 20.0
 position = Vector2(2211, 300)
 speed = 20.0
 distance = 50.0
-
-[node name="Pausa" parent="." instance=ExtResource("14_8alr7")]
 
 [connection signal="collected" from="monedas/moneda" to="CanvasLayer" method="_on_moneda_collected"]
 [connection signal="collected" from="monedas/moneda2" to="CanvasLayer" method="_on_moneda_collected"]

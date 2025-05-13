@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=4 uid="uid://glthnfd6l2d4"]
+[gd_scene load_steps=17 format=4 uid="uid://glthnfd6l2d4"]
 
 [ext_resource type="PackedScene" uid="uid://76bb6uphwwud" path="res://Assests/Terreno/tropical/tropical_fondo.tscn" id="1_8xi6m"]
 [ext_resource type="PackedScene" uid="uid://dk2a2qsm323w8" path="res://Assests/enemigos/pinguino/pinguino.tscn" id="1_44wt0"]
 [ext_resource type="PackedScene" uid="uid://dad3gyq7o4s6e" path="res://Assests/GatoBlanco/Gato.tscn" id="1_86ulf"]
 [ext_resource type="PackedScene" uid="uid://iyuwttgoqfrh" path="res://Assests/enemigos/pinchos/pinchos.tscn" id="1_k5gk2"]
 [ext_resource type="TileSet" uid="uid://d0yp4p5yg81jv" path="res://Assests/Terreno/terreno/normal.tres" id="1_lxmjl"]
+[ext_resource type="PackedScene" uid="uid://jvwsnehagpqg" path="res://Assests/menus/MenuPausa/pausa.tscn" id="2_7cpjy"]
 [ext_resource type="PackedScene" uid="uid://dibh14f0arncu" path="res://Assests/interfaz/personaje/gui_gato.tscn" id="2_qcf5l"]
 [ext_resource type="TileSet" uid="uid://b48ss1coxe2v" path="res://Assests/Terreno/fondos/interiores.tres" id="2_yjnxj"]
 [ext_resource type="PackedScene" uid="uid://cquxox3bwajai" path="res://Assests/enemigos/Slime/Slime_2d.tscn" id="3_imryq"]
@@ -17,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://b5xesgsbxx0fp" path="res://Assests/scenas/borde_del_mundo.tscn" id="15_yndkk"]
 
 [node name="mundo_3" type="Node2D"]
+
+[node name="Pausa" parent="." instance=ExtResource("2_7cpjy")]
 
 [node name="CanvasLayer" parent="." instance=ExtResource("2_qcf5l")]
 

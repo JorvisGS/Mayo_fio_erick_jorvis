@@ -54,3 +54,5 @@ text = "JUGAR"
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "SALIR"
+
+[connection signal="pressed" from="VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
